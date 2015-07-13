@@ -1,0 +1,17 @@
+PODS:
+  - CDAPdfReader (0.1.0)
+  - Kiwi (2.3.1)
+
+DEPENDENCIES:
+  - CDAPdfReader (from `../`)
+  - Kiwi
+
+EXTERNAL SOURCES:
+  CDAPdfReader:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CDAPdfReader: 4f94b78fc94e7bb0c87d8ec648fcc422fc77b850
+  Kiwi: f038a6c61f7a9e4d7766bff5717aa3b3fdb75f55
+
+COCOAPODS: 0.37.2

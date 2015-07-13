@@ -1,0 +1,6 @@
+framework module CDAPdfReader {
+  umbrella header "Pods-CDAPdfReader_Tests-CDAPdfReader-umbrella.h"
+
+  export *
+  module * { export * }
+}
