@@ -80,36 +80,18 @@
 		554B938B2633BEBF7BE5B132 /* KWCaptureSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3D8D73EADA061EAA11D4B8 /* KWCaptureSpy.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		55C6FD0A73EC5E88D3122768 /* KWBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = D24D07FF1152C44B6774C19B /* KWBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5635E9AC816C2359231EA6C6 /* KWInvocationCapturer.h in Headers */ = {isa = PBXBuildFile; fileRef = 480094EEC16BECE77630995E /* KWInvocationCapturer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56B3C4FE1B53D536005DAB8E /* CDAPDFReaderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B3C4FC1B53D536005DAB8E /* CDAPDFReaderViewController.h */; };
 		56B3C4FF1B53D536005DAB8E /* CDAPDFReaderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B3C4FC1B53D536005DAB8E /* CDAPDFReaderViewController.h */; };
-		56B3C5001B53D536005DAB8E /* CDAPDFReaderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B3C4FC1B53D536005DAB8E /* CDAPDFReaderViewController.h */; };
 		56B3C5011B53D536005DAB8E /* CDAPDFReaderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B3C4FC1B53D536005DAB8E /* CDAPDFReaderViewController.h */; };
-		56B3C5021B53D536005DAB8E /* CDAPDFReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C4FD1B53D536005DAB8E /* CDAPDFReaderViewController.m */; };
 		56B3C5031B53D536005DAB8E /* CDAPDFReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C4FD1B53D536005DAB8E /* CDAPDFReaderViewController.m */; };
-		56B3C5041B53D536005DAB8E /* CDAPDFReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C4FD1B53D536005DAB8E /* CDAPDFReaderViewController.m */; };
-		56B3C5051B53D536005DAB8E /* CDAPDFReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C4FD1B53D536005DAB8E /* CDAPDFReaderViewController.m */; };
 		56B3C5061B53D536005DAB8E /* CDAPDFReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C4FD1B53D536005DAB8E /* CDAPDFReaderViewController.m */; };
-		56B3C5071B53D536005DAB8E /* CDAPDFReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C4FD1B53D536005DAB8E /* CDAPDFReaderViewController.m */; };
-		56B3C50A1B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B3C5081B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.h */; };
 		56B3C50B1B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B3C5081B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.h */; };
-		56B3C50C1B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B3C5081B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.h */; };
 		56B3C50D1B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B3C5081B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.h */; };
-		56B3C50E1B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C5091B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.m */; };
 		56B3C50F1B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C5091B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.m */; };
-		56B3C5101B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C5091B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.m */; };
-		56B3C5111B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C5091B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.m */; };
 		56B3C5121B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C5091B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.m */; };
-		56B3C5131B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C5091B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.m */; };
-		56B3C5161B53D6BD005DAB8E /* CDAPDFReaderDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B3C5141B53D6BD005DAB8E /* CDAPDFReaderDocument.h */; };
 		56B3C5171B53D6BD005DAB8E /* CDAPDFReaderDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B3C5141B53D6BD005DAB8E /* CDAPDFReaderDocument.h */; };
-		56B3C5181B53D6BD005DAB8E /* CDAPDFReaderDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B3C5141B53D6BD005DAB8E /* CDAPDFReaderDocument.h */; };
 		56B3C5191B53D6BD005DAB8E /* CDAPDFReaderDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B3C5141B53D6BD005DAB8E /* CDAPDFReaderDocument.h */; };
-		56B3C51A1B53D6BD005DAB8E /* CDAPDFReaderDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C5151B53D6BD005DAB8E /* CDAPDFReaderDocument.m */; };
 		56B3C51B1B53D6BD005DAB8E /* CDAPDFReaderDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C5151B53D6BD005DAB8E /* CDAPDFReaderDocument.m */; };
-		56B3C51C1B53D6BD005DAB8E /* CDAPDFReaderDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C5151B53D6BD005DAB8E /* CDAPDFReaderDocument.m */; };
-		56B3C51D1B53D6BD005DAB8E /* CDAPDFReaderDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C5151B53D6BD005DAB8E /* CDAPDFReaderDocument.m */; };
 		56B3C51E1B53D6BD005DAB8E /* CDAPDFReaderDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C5151B53D6BD005DAB8E /* CDAPDFReaderDocument.m */; };
-		56B3C51F1B53D6BD005DAB8E /* CDAPDFReaderDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C5151B53D6BD005DAB8E /* CDAPDFReaderDocument.m */; };
 		58090319721ECA600E7C500A /* KWContextNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 752E2ACA81DF58259D14B325 /* KWContextNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		59DFE41795241700500B5C35 /* KWLetNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F117A4B5BB98216691AB4A /* KWLetNode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		5E005BC6E38EBE909597AEF0 /* NSMethodSignature+KiwiAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = ED98024243ADCD8ABC9A5A6E /* NSMethodSignature+KiwiAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1070,10 +1052,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56B3C5181B53D6BD005DAB8E /* CDAPDFReaderDocument.h in Headers */,
-				56B3C5001B53D536005DAB8E /* CDAPDFReaderViewController.h in Headers */,
 				2D6A6CE00D2BC862BD244405 /* Pods-CDAPdfReader_Tests-umbrella.h in Headers */,
-				56B3C50C1B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1092,10 +1071,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56B3C5161B53D6BD005DAB8E /* CDAPDFReaderDocument.h in Headers */,
-				56B3C4FE1B53D536005DAB8E /* CDAPDFReaderViewController.h in Headers */,
 				E67DF1BA3288194D155BFCD6 /* Pods-CDAPdfReader_Example-umbrella.h in Headers */,
-				56B3C50A1B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1297,9 +1273,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56B3C5041B53D536005DAB8E /* CDAPDFReaderViewController.m in Sources */,
-				56B3C51C1B53D6BD005DAB8E /* CDAPDFReaderDocument.m in Sources */,
-				56B3C5101B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1307,9 +1280,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56B3C5071B53D536005DAB8E /* CDAPDFReaderViewController.m in Sources */,
-				56B3C51F1B53D6BD005DAB8E /* CDAPDFReaderDocument.m in Sources */,
-				56B3C5131B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1318,9 +1288,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC72BF3325EAA292C6B77712 /* Pods-CDAPdfReader_Tests-dummy.m in Sources */,
-				56B3C51D1B53D6BD005DAB8E /* CDAPDFReaderDocument.m in Sources */,
-				56B3C5051B53D536005DAB8E /* CDAPDFReaderViewController.m in Sources */,
-				56B3C5111B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1340,9 +1307,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAF30AA9669AC046E8AE3AE2 /* Pods-CDAPdfReader_Example-dummy.m in Sources */,
-				56B3C51A1B53D6BD005DAB8E /* CDAPDFReaderDocument.m in Sources */,
-				56B3C5021B53D536005DAB8E /* CDAPDFReaderViewController.m in Sources */,
-				56B3C50E1B53D67D005DAB8E /* CDAPFReaderThumbnailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
