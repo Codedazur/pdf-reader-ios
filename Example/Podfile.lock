@@ -8,7 +8,7 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   CDAPdfReader:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   CDAPdfReader: 4f94b78fc94e7bb0c87d8ec648fcc422fc77b850

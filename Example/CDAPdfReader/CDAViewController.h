@@ -7,7 +7,8 @@
 //
 
 @import UIKit;
+@import CDAPdfReader;
 
-@interface CDAViewController : UIViewController
+@interface CDAViewController : CDAPDFReaderViewController
 
 @end
