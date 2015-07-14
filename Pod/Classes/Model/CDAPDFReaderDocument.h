@@ -18,7 +18,7 @@
  *
  *  @param pdfDocumentPath Absolute path of the PDF document
  *  
- *  @return An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
+ *  @return An initialized object, or nil if an object could not be created (in case of debugging it will arise and exception instead).
  */
 - (id) initWithPDFDocumentPath:(NSString *) pdfPath;
 

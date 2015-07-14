@@ -36,7 +36,10 @@
     CFRelease(url);
     
     if (document == NULL) {
-        [NSException raise:@"Invalid PDF document" format:@"there is no document at path: %@", pdfPath];
+#ifdef DEBUG
+        [NSException raise:NSGenericException format:@"Invalid PDF document: there is no document at %@", pdfPath];
+#endif
+        NSLog(@"Invalid PDF document: there is no document at %@", pdfPath);
         CGPDFDocumentRelease(document);
         return nil;
     }
