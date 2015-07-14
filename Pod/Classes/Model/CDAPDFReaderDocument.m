@@ -37,6 +37,8 @@
     
     if (document == NULL) {
         [NSException raise:@"Invalid PDF document" format:@"there is no document at path: %@", pdfPath];
+        CGPDFDocumentRelease(document);
+        return nil;
     }
     
     _numberOfPages = CGPDFDocumentGetNumberOfPages(document);

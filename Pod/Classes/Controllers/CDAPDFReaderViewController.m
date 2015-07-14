@@ -14,6 +14,7 @@
 @interface CDAPDFReaderViewController ()
 
 @property (nonatomic, strong) CDAPDFReaderDocument *readerDocument;
+@property (nonatomic, strong) IBInspectable NSString *documentPath;
 
 @end
 
@@ -33,7 +34,20 @@
 #pragma mark - Public methods
 
 - (void) setDocumentPath:(NSString *)pdfDocumentPath {
-    self.readerDocument = [[CDAPDFReaderDocument alloc] initWithPDFDocumentPath:pdfDocumentPath];
+    NSString *absolutePath;
+    
+    pdfDocumentPath = [pdfDocumentPath stringByDeletingPathExtension];
+    
+    NSArray *pathComponents = [pdfDocumentPath pathComponents];
+    
+    if (pathComponents.count == 1) {
+        absolutePath = [[NSBundle mainBundle] pathForResource:pdfDocumentPath ofType:@"pdf"];
+    }
+    else {
+        absolutePath = pdfDocumentPath;
+    }
+    
+    self.readerDocument = [[CDAPDFReaderDocument alloc] initWithPDFDocumentPath:absolutePath];
 }
 
 @end

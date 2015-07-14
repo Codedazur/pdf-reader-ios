@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5661C1ED1B54F4B300DF479A /* drawingwithquartz2d.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5661C1EC1B54F4B300DF479A /* drawingwithquartz2d.pdf */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		1F51944D676546EF201E636C /* Pods-CDAPdfReader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDAPdfReader_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDAPdfReader_Tests/Pods-CDAPdfReader_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5661C1EC1B54F4B300DF479A /* drawingwithquartz2d.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = drawingwithquartz2d.pdf; sourceTree = "<group>"; };
 		5853FE9A18F50F518F3C2F57 /* Pods_CDAPdfReader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDAPdfReader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59663ADC7D3F96B30D61D152 /* CDAPdfReader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CDAPdfReader.podspec; path = ../CDAPdfReader.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* CDAPdfReader_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDAPdfReader_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5661C1EA1B54F44400DF479A /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				5661C1EB1B54F46200DF479A /* PDFs */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		5661C1EB1B54F46200DF479A /* PDFs */ = {
+			isa = PBXGroup;
+			children = (
+				5661C1EC1B54F4B300DF479A /* drawingwithquartz2d.pdf */,
+			);
+			path = PDFs;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +148,7 @@
 		6003F593195388D20070C39A /* Example for CDAPdfReader */ = {
 			isa = PBXGroup;
 			children = (
+				5661C1EA1B54F44400DF479A /* assets */,
 				6003F59C195388D20070C39A /* CDAAppDelegate.h */,
 				6003F59D195388D20070C39A /* CDAAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -276,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5661C1ED1B54F4B300DF479A /* drawingwithquartz2d.pdf in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
