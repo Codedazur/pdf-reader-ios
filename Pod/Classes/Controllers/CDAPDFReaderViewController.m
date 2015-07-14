@@ -46,6 +46,18 @@
     self.readerDocument = [[CDAPDFReaderDocument alloc] initWithPDFDocumentPath:pdfDocumentPath];
 }
 
+- (BOOL) isPortraitLayoutSupported {
+    return (self.orientationLayout & CDAPDFReaderOrientationLayoutPortrait) != 0;
+}
+
+- (BOOL) isLandscapeLayoutSupported {
+    return (self.orientationLayout & CDAPDFReaderOrientationLayoutLandscape) != 0;
+}
+
+- (BOOL) isTwoPagesLayoutSupported {
+    return (self.orientationLayout & CDAPDFReaderOrientationLayoutTwoPages) != 0;
+}
+
 
 #pragma mark - UIPageViewController DataSource methods
 
@@ -66,6 +78,9 @@
     
     return [self createPDFPageViewControllerWithPageRef:previousPageRef andPageIndex:previousPageIndex];
 }
+
+
+#pragma mark - Private methods
 
 - (CDAPDFPageViewController *) createPDFPageViewControllerWithPageRef:(CGPDFPageRef)pageRef andPageIndex:(NSInteger)pageIndex {
     CDAPDFPageViewController *pdfPageViewController;
