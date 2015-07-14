@@ -67,4 +67,13 @@
     return self;
 }
 
+
+#pragma mark - Public methods
+
+- (CGPDFPageRef) pageRefForPageIndex:(NSInteger)pageIndex {
+    if (pageIndex < 0 || pageIndex >= self.pdfPages.count) return NULL;
+    
+    return (__bridge CGPDFPageRef)[self.pdfPages objectAtIndex:pageIndex];
+}
+
 @end

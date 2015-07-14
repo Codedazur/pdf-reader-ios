@@ -81,6 +81,18 @@
 		5495CD216AE5D08AB5C21EC8 /* KWExampleSuiteBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE58C0562AC4C9618768A81 /* KWExampleSuiteBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55A14F46CD9BD7A2AA26624E /* KWSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA171C70B47B2ADC5497236 /* KWSpec.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		565E61B601866492DFDE68FE /* KWAfterAllNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F380E664BE342B0C58B18DA /* KWAfterAllNode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5661C1F21B55159B00DF479A /* CDAPDFPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5661C1EF1B55159200DF479A /* CDAPDFPageViewController.m */; };
+		5661C1F31B55159C00DF479A /* CDAPDFPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5661C1EF1B55159200DF479A /* CDAPDFPageViewController.m */; };
+		5661C1F41B5515A200DF479A /* CDAPDFPageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5661C1EE1B55159200DF479A /* CDAPDFPageViewController.h */; };
+		5661C1F51B5515A500DF479A /* CDAPDFPageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5661C1EE1B55159200DF479A /* CDAPDFPageViewController.h */; };
+		5661C1F91B551BB900DF479A /* CDAPDFPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5661C1F71B551BB900DF479A /* CDAPDFPageView.h */; };
+		5661C1FA1B551BB900DF479A /* CDAPDFPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5661C1F71B551BB900DF479A /* CDAPDFPageView.h */; };
+		5661C1FB1B551BB900DF479A /* CDAPDFPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5661C1F81B551BB900DF479A /* CDAPDFPageView.m */; };
+		5661C1FC1B551BB900DF479A /* CDAPDFPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5661C1F81B551BB900DF479A /* CDAPDFPageView.m */; };
+		5661C2001B55202E00DF479A /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 5661C1FE1B55202E00DF479A /* Utilities.h */; };
+		5661C2011B55202E00DF479A /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 5661C1FE1B55202E00DF479A /* Utilities.h */; };
+		5661C2021B55202E00DF479A /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5661C1FF1B55202E00DF479A /* Utilities.m */; };
+		5661C2031B55202E00DF479A /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5661C1FF1B55202E00DF479A /* Utilities.m */; };
 		569F4CA61B540134008DF787 /* CDAPFReaderThumbnailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AD83FE1074D51F52F8BA8C /* CDAPFReaderThumbnailsViewController.m */; };
 		5717760340B49E7FAE66F7CF /* KiwiConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = BF0F954FF2274799F7CF80B7 /* KiwiConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		58AF5A548D4B5746F2944AF9 /* Kiwi.h in Headers */ = {isa = PBXBuildFile; fileRef = 33CF75DE9DDBED7C723D1602 /* Kiwi.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -349,6 +361,12 @@
 		556E534CB579EC5F9DA9EB60 /* Pods-CDAPdfReader_Example-CDAPdfReader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CDAPdfReader_Example-CDAPdfReader-prefix.pch"; sourceTree = "<group>"; };
 		558E91092E6363F1503EC439 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		559D3E2D3240E7E97CE95777 /* NSObject+KiwiVerifierAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KiwiVerifierAdditions.m"; path = "Classes/Core/NSObject+KiwiVerifierAdditions.m"; sourceTree = "<group>"; };
+		5661C1EE1B55159200DF479A /* CDAPDFPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAPDFPageViewController.h; sourceTree = "<group>"; };
+		5661C1EF1B55159200DF479A /* CDAPDFPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAPDFPageViewController.m; sourceTree = "<group>"; };
+		5661C1F71B551BB900DF479A /* CDAPDFPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAPDFPageView.h; sourceTree = "<group>"; };
+		5661C1F81B551BB900DF479A /* CDAPDFPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAPDFPageView.m; sourceTree = "<group>"; };
+		5661C1FE1B55202E00DF479A /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		5661C1FF1B55202E00DF479A /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		56D66704F9910D0A21181428 /* KWBeZeroMatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWBeZeroMatcher.m; path = Classes/Matchers/KWBeZeroMatcher.m; sourceTree = "<group>"; };
 		575E070CAA96744994004E75 /* KWGenericMatchEvaluator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWGenericMatchEvaluator.h; path = Classes/Matchers/KWGenericMatchEvaluator.h; sourceTree = "<group>"; };
 		578B7F40B379EF3E28BA9E11 /* KWStringUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWStringUtilities.m; path = Classes/Core/KWStringUtilities.m; sourceTree = "<group>"; };
@@ -568,6 +586,8 @@
 				09CC389E699D607490BB0034 /* CDAPDFReaderViewController.m */,
 				533665C3CF00600D67C501B5 /* CDAPFReaderThumbnailsViewController.h */,
 				17AD83FE1074D51F52F8BA8C /* CDAPFReaderThumbnailsViewController.m */,
+				5661C1EE1B55159200DF479A /* CDAPDFPageViewController.h */,
+				5661C1EF1B55159200DF479A /* CDAPDFPageViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -597,6 +617,24 @@
 			);
 			name = "Pods-CDAPdfReader_Example";
 			path = "Target Support Files/Pods-CDAPdfReader_Example";
+			sourceTree = "<group>";
+		};
+		5661C1F61B551B7100DF479A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5661C1F71B551BB900DF479A /* CDAPDFPageView.h */,
+				5661C1F81B551BB900DF479A /* CDAPDFPageView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5661C1FD1B551F9C00DF479A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5661C1FE1B55202E00DF479A /* Utilities.h */,
+				5661C1FF1B55202E00DF479A /* Utilities.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		590D3857DCC128B4CEA3E79A /* Kiwi */ = {
@@ -882,6 +920,8 @@
 			children = (
 				21B5179801FE6B774369D63B /* Controllers */,
 				6C793DCEACF2B358D4295A60 /* Model */,
+				5661C1F61B551B7100DF479A /* Views */,
+				5661C1FD1B551F9C00DF479A /* Utils */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -944,7 +984,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC88EED5C28BF786FAAE8599 /* CDAPDFReaderDocument.h in Headers */,
+				5661C1F91B551BB900DF479A /* CDAPDFPageView.h in Headers */,
 				956919407F36F89C566620D3 /* CDAPDFReaderViewController.h in Headers */,
+				5661C2001B55202E00DF479A /* Utilities.h in Headers */,
+				5661C1F41B5515A200DF479A /* CDAPDFPageViewController.h in Headers */,
 				E76A2F7AC3E8B7EAE7A08FEE /* Pods-CDAPdfReader_Example-CDAPdfReader-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -962,7 +1005,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9BFF2657708A8D7CDEFDE78 /* CDAPDFReaderDocument.h in Headers */,
+				5661C1FA1B551BB900DF479A /* CDAPDFPageView.h in Headers */,
 				93090C47AF5399710B9F0046 /* CDAPDFReaderViewController.h in Headers */,
+				5661C2011B55202E00DF479A /* Utilities.h in Headers */,
+				5661C1F51B5515A500DF479A /* CDAPDFPageViewController.h in Headers */,
 				737266E2EA99388DE67D46EC /* Pods-CDAPdfReader_Tests-CDAPdfReader-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1376,9 +1422,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFB48DA4AA5D648F8B81C071 /* CDAPDFReaderDocument.m in Sources */,
+				5661C1F21B55159B00DF479A /* CDAPDFPageViewController.m in Sources */,
 				4AED4280291F45C90D9DC86E /* CDAPDFReaderViewController.m in Sources */,
 				84E6C23F758B732F6BEA727E /* CDAPFReaderThumbnailsViewController.m in Sources */,
 				DCF2FEEF501BC5ADB82A2C2A /* Pods-CDAPdfReader_Example-CDAPdfReader-dummy.m in Sources */,
+				5661C2021B55202E00DF479A /* Utilities.m in Sources */,
+				5661C1FB1B551BB900DF479A /* CDAPDFPageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1387,9 +1436,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F37E9DBE1CB2E0018280C198 /* CDAPDFReaderDocument.m in Sources */,
+				5661C1F31B55159C00DF479A /* CDAPDFPageViewController.m in Sources */,
 				BE0086C3A2B7755552B670D9 /* CDAPDFReaderViewController.m in Sources */,
 				DC41FC5CC99C304A04E50853 /* Pods-CDAPdfReader_Tests-CDAPdfReader-dummy.m in Sources */,
 				569F4CA61B540134008DF787 /* CDAPFReaderThumbnailsViewController.m in Sources */,
+				5661C2031B55202E00DF479A /* Utilities.m in Sources */,
+				5661C1FC1B551BB900DF479A /* CDAPDFPageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

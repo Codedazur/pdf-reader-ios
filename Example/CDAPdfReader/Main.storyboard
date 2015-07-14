@@ -23,7 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CF2-Cb-IWr" kind="show" identifier="storyboardImplementation" id="J7Q-gm-nW8"/>
+                                    <segue destination="IpH-5g-hdz" kind="show" identifier="storyboardImplementation" id="p0m-RI-z0b"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -33,31 +33,18 @@
                             <constraint firstAttribute="centerX" secondItem="boT-4Z-O1w" secondAttribute="centerX" id="I4U-LO-Mfe"/>
                         </constraints>
                     </view>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="documentPath" value="drawingwithquartz2d.pdf"/>
-                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="40" y="334"/>
         </scene>
         <!--Reader View Controller-->
-        <scene sceneID="zSD-n4-O1B">
+        <scene sceneID="Yzf-PG-LGr">
             <objects>
-                <viewController id="CF2-Cb-IWr" customClass="CDAPDFReaderViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xKr-sw-F06"/>
-                        <viewControllerLayoutGuide type="bottom" id="Qxt-Rh-F37"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cso-W6-JoF">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v2N-9D-MJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="IpH-5g-hdz" customClass="CDAPDFReaderViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vwy-y8-dA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="768" y="334"/>
+            <point key="canvasLocation" x="812" y="334"/>
         </scene>
     </scenes>
 </document>

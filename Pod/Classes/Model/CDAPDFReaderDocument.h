@@ -22,5 +22,14 @@
  */
 - (id) initWithPDFDocumentPath:(NSString *) pdfPath;
 
+/**
+ *  Return the specified PDF page of the PDF document passed in the constructor.
+ *
+ *  @param pageIndex the number of the desired page starting from 0.
+ *
+ *  @return The related CGPDFPageRef to the indicated pageIndex, or nil if the pageIndex is out of range.
+ */
+- (CGPDFPageRef) pageRefForPageIndex:(NSInteger)pageIndex;
+
 
 @end
