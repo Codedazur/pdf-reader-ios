@@ -8,6 +8,8 @@
 
 #import "CDAViewController.h"
 
+@import CDAPdfReader;
+
 @interface CDAViewController ()
 
 @end
@@ -24,6 +26,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqual:@"storyboardImplementation"]) {
+        CDAPDFReaderViewController *viewController = (CDAPDFReaderViewController *)segue.destinationViewController;
+        NSString *documentPath = [[NSBundle mainBundle] pathForResource:@"drawingwithquartz2d" ofType:@"pdf"];
+        [viewController setDocumentPath:documentPath];
+    }
 }
 
 @end
