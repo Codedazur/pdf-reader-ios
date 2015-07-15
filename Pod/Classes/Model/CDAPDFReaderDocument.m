@@ -30,7 +30,7 @@
 #ifdef DEBUG
         [NSException raise:NSGenericException format:@"%@ - Document path can't be a nil or empty string", NSStringFromClass([self class])];
 #endif
-        NSLog(@"%@ - Document path can't be a nil or empty string", NSStringFromClass([self class]));
+        NSLog(@"ERROR!!! %@ - Document path can't be a nil or empty string", NSStringFromClass([self class]));
         return nil;
     }
     
@@ -47,7 +47,7 @@
 #ifdef DEBUG
         [NSException raise:NSGenericException format:@"%@ - Invalid PDF document: there is no document at %@", NSStringFromClass([self class]),  pdfPath];
 #endif
-        NSLog(@"%@ - Invalid PDF document: there is no document at %@", NSStringFromClass([self class]), pdfPath);
+        NSLog(@"ERROR!!! %@ - Invalid PDF document: there is no document at %@", NSStringFromClass([self class]), pdfPath);
         CGPDFDocumentRelease(document);
         return nil;
     }
