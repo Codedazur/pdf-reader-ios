@@ -15,9 +15,7 @@ typedef NS_OPTIONS(NSUInteger, CDAPDFReaderOrientationLayout){
     /// The pages are displayed in portrait when the device is in Portrait or PortraitUpsideDown
     CDAPDFReaderOrientationLayoutPortrait = 1 << 0,
     /// The pages are displayed in landscape when the device is in LandscapeLeft or LandscapeRight
-    CDAPDFReaderOrientationLayoutLandscapeOnePage = 1 << 1,
-    /// Two pages are displayed in portrait when the device is in LandscapeLeft or LandscapeRight and the transition style is set to Curl. This option prevails over one page landscape
-    CDAPDFReaderOrientationLayoutLandscapeTwoPages = 1 << 2
+    CDAPDFReaderOrientationLayoutLandscape = 1 << 1
 };
 
 #endif

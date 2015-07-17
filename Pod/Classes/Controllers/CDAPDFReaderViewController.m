@@ -57,7 +57,7 @@
 }
 
 - (void) initializeInternalProperties {
-    self.orientationLayout = CDAPDFReaderOrientationLayoutPortrait | CDAPDFReaderOrientationLayoutLandscapeOnePage;
+    self.orientationLayout = CDAPDFReaderOrientationLayoutPortrait | CDAPDFReaderOrientationLayoutLandscape;
     _currentPageIndex = NSNotFound;
     self.dataSource = self;
     self.delegate = self;
@@ -81,23 +81,6 @@
 }
 
 
-#pragma mark - Getters & Setters
-
-- (void) setOrientationLayout:(CDAPDFReaderOrientationLayout)orientationLayout {
-    _orientationLayout = orientationLayout;
-    
-    if (self.transitionStyle != UIPageViewControllerTransitionStylePageCurl) {
-        if ((orientationLayout & CDAPDFReaderOrientationLayoutLandscapeTwoPages) != 0) {
-            NSLog(@"WARNING!!! CDAPDFReaderOrientationLayoutLandscapeTwoPages won't work with other transition style rather than Curl.");
-        }
-    }
-    else if ([self isLandscapeOnePageLayoutSupported] && [self isLandscapeTwoPagesLayoutSupported]) {
-        NSLog(@"WARNING!!! Both layout orientation options: one page and two pages landscape, are specified. CDAPDFReaderOrientationLayoutLandscapeTwoPages will prevail.");
-    }
-    
-}
-
-
 #pragma mark - Public methods
 
 - (void) setDocumentPath:(NSString *)pdfDocumentPath {
@@ -108,75 +91,24 @@
     return (self.orientationLayout & CDAPDFReaderOrientationLayoutPortrait) != 0;
 }
 
-- (BOOL) isLandscapeOnePageLayoutSupported {
-    return (self.orientationLayout & CDAPDFReaderOrientationLayoutLandscapeOnePage) != 0;
-}
-
-- (BOOL) isLandscapeTwoPagesLayoutSupported {
-    return ((self.orientationLayout & CDAPDFReaderOrientationLayoutLandscapeTwoPages) != 0) && (self.transitionStyle == UIPageViewControllerTransitionStylePageCurl);
+- (BOOL) isLandscapeLayoutSupported {
+    return (self.orientationLayout & CDAPDFReaderOrientationLayoutLandscape) != 0;
 }
 
 
 #pragma mark - UIPageViewController Delegate methods
 
-- (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientation {
-    CDAPDFPageViewController *currentPageViewController = (CDAPDFPageViewController *)[self.viewControllers firstObject];
-    if (!currentPageViewController) {
-        _currentPageIndex = 0;
-        currentPageViewController = [self createPDFPageViewControllerWithPageRef:[self.readerDocument pageRefForPageIndex:self.currentPageIndex] andPageIndex:self.currentPageIndex];
-    }
-    
-    if (UIInterfaceOrientationIsPortrait(orientation) && [self isPortraitLayoutSupported]) {
-        self.doubleSided = NO;
-        [self setViewControllers:@[currentPageViewController] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
-        
-        return UIPageViewControllerSpineLocationMin;
-    }
-    else if (UIInterfaceOrientationIsLandscape(orientation)) {
-        if (self.spineLocation == UIPageViewControllerSpineLocationMid) return UIPageViewControllerSpineLocationMid;
-        NSArray *viewControllers;
-        if ([self isLandscapeTwoPagesLayoutSupported]) {
-            if ([self isCurrentPageOnLeftSide]) {
-                NSInteger nextPageIndex = self.currentPageIndex + 1;
-                CDAPDFPageViewController *nextPageViewController = [self createPDFPageViewControllerWithPageRef:[self.readerDocument pageRefForPageIndex:nextPageIndex]  andPageIndex:nextPageIndex];
-                viewControllers = @[currentPageViewController, nextPageViewController];
-            }
-            else {
-                _currentPageIndex--;
-                CDAPDFPageViewController *prevPageViewController = [self createPDFPageViewControllerWithPageRef:[self.readerDocument pageRefForPageIndex:self.currentPageIndex]  andPageIndex:self.currentPageIndex];
-                viewControllers = @[prevPageViewController, currentPageViewController];
-            }
-            [self setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
-            return UIPageViewControllerSpineLocationMid;
-        }
-        else if ([self isLandscapeOnePageLayoutSupported]) {
-            self.doubleSided = NO;
-            [self setViewControllers:@[currentPageViewController] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
-            
-            return UIPageViewControllerSpineLocationMin;
-        }
-    }
-    
-    return UIPageViewControllerSpineLocationNone;
-}
-
 - (NSUInteger)pageViewControllerSupportedInterfaceOrientations:(UIPageViewController *)pageViewController {
     UIInterfaceOrientationMask orientationMask = 0;
     
     if ([self isPortraitLayoutSupported]) orientationMask = orientationMask | UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
-    if ([self isLandscapeOnePageLayoutSupported] || [self isLandscapeTwoPagesLayoutSupported]) orientationMask = orientationMask | UIInterfaceOrientationMaskLandscape;
+    if ([self isLandscapeLayoutSupported]) orientationMask = orientationMask | UIInterfaceOrientationMaskLandscape;
     
     return orientationMask;
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
-    if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation) && [self isLandscapeTwoPagesLayoutSupported]) {
-        // When two pages are shown, we take the left page as the current one
-        _currentPageIndex = [[self.viewControllers objectAtIndex:0] pageIndex];
-    }
-    else {
-        _currentPageIndex = [[self.viewControllers lastObject] pageIndex];
-    }
+    _currentPageIndex = [[self.viewControllers firstObject] pageIndex];
 }
 
 
@@ -208,13 +140,8 @@
     if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation) && [self isPortraitLayoutSupported]) {
         orientationLayout = CDAPDFReaderOrientationLayoutPortrait;
     }
-    else if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {
-        if ([self isLandscapeTwoPagesLayoutSupported]) {
-            orientationLayout = CDAPDFReaderOrientationLayoutLandscapeTwoPages;
-        }
-        else if ([self isLandscapeOnePageLayoutSupported]) {
-            orientationLayout = CDAPDFReaderOrientationLayoutLandscapeOnePage;
-        }
+    else if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation) && [self isLandscapeLayoutSupported]) {
+        orientationLayout = CDAPDFReaderOrientationLayoutLandscape;
     }
     
     return orientationLayout;
@@ -225,13 +152,8 @@
     if (UIInterfaceOrientationIsPortrait(interfaceOrientation) && [self isPortraitLayoutSupported]) {
         orientationLayout = CDAPDFReaderOrientationLayoutPortrait;
     }
-    else if (UIInterfaceOrientationIsLandscape(interfaceOrientation)) {
-        if ([self isLandscapeTwoPagesLayoutSupported]) {
-            orientationLayout = CDAPDFReaderOrientationLayoutLandscapeTwoPages;
-        }
-        else if ([self isLandscapeOnePageLayoutSupported]) {
-            orientationLayout = CDAPDFReaderOrientationLayoutLandscapeOnePage;
-        }
+    else if (UIInterfaceOrientationIsLandscape(interfaceOrientation) && [self isLandscapeLayoutSupported]) {
+        orientationLayout = CDAPDFReaderOrientationLayoutLandscape;
     }
     
     return orientationLayout;
@@ -261,11 +183,6 @@
     CGPDFPageRef firstPageRef = [self.readerDocument pageRefForPageIndex:self.currentPageIndex];
     CDAPDFPageViewController *firstPDFPageViewController = [self createPDFPageViewControllerWithPageRef:firstPageRef andPageIndex:self.currentPageIndex];
     NSArray *pages = @[firstPDFPageViewController];
-    if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation) && [self isLandscapeTwoPagesLayoutSupported]) {
-        CGPDFPageRef secondPageRef = [self.readerDocument pageRefForPageIndex:self.currentPageIndex+1];
-        CDAPDFPageViewController *secondPDFPageViewController = [self createPDFPageViewControllerWithPageRef:secondPageRef andPageIndex:self.currentPageIndex+1];
-        pages = @[firstPDFPageViewController, secondPDFPageViewController];
-    }
     [self setViewControllers:pages direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
 }
 

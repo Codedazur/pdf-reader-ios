@@ -33,6 +33,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+}
+
 - (void) setPageRef:(CGPDFPageRef)pageRef {
     _pageRef = pageRef;
     if ([self isViewLoaded]) {
@@ -75,6 +80,7 @@
         self.pdfPageView.transform = CGAffineTransformInvert([self transformForOrientationLayout:self.orientationLayoutApplied]);
     }
     self.pdfPageView.transform = [self transformForOrientationLayout:newOrientationLayout];
+//    self.pdfPageView.center = self.view.center;
 //    self.pdfPageView.transform = [self transformForOrientationLayout:newOrientationLayout];
 //    self.view.layer.sublayerTransform = CATransform3DMakeAffineTransform([self transformForOrientationLayout:newOrientationLayout]);
 }
@@ -87,12 +93,8 @@
             transform = self.pdfPageView.portraitTransform;
             break;
             
-        case CDAPDFReaderOrientationLayoutLandscapeOnePage:
-            transform = self.pdfPageView.landscapeOnePageTransform;
-            break;
-            
-        case CDAPDFReaderOrientationLayoutLandscapeTwoPages:
-            transform = self.pdfPageView.landscapeTwoPagesTransform;
+        case CDAPDFReaderOrientationLayoutLandscape:
+            transform = self.pdfPageView.landscapeTransform;
             break;
             
         default:

@@ -27,6 +27,7 @@
     
     self.pageRef = pageRef;
     self.backgroundColor = [UIColor clearColor];
+//    [self setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin| UIViewAutoresizingFlexibleRightMargin| UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth];
     
     return self;
 }
@@ -61,22 +62,13 @@
     return _portraitTransform;
 }
 
-- (CGAffineTransform) landscapeOnePageTransform {
-    if (CGAffineTransformEqualToTransform(_landscapeOnePageTransform, CGAffineTransformZero())) {
+- (CGAffineTransform) landscapeTransform {
+    if (CGAffineTransformEqualToTransform(_landscapeTransform, CGAffineTransformZero())) {
         CGRect pageRect = CGPDFPageGetBoxRect(self.pageRef, kCGPDFMediaBox);
-        _landscapeOnePageTransform = pdfAspectFitTransform(pageRect, kLANDSCAPE_RECT);
+        _landscapeTransform = pdfAspectFitTransform(pageRect, kLANDSCAPE_RECT);
     }
     
-    return _landscapeOnePageTransform;
-}
-
-- (CGAffineTransform) landscapeTwoPagesTransform {
-    if (CGAffineTransformEqualToTransform(_landscapeTwoPagesTransform, CGAffineTransformZero())) {
-        CGRect pageRect = CGPDFPageGetBoxRect(self.pageRef, kCGPDFMediaBox);
-        _landscapeTwoPagesTransform = pdfAspectFitTransform(pageRect, kLANDSCAPE_DOUBLE_SIDED_PAGE_RECT);
-    }
-    
-    return _landscapeTwoPagesTransform;
+    return _landscapeTransform;
 }
 
 
@@ -85,8 +77,7 @@
 - (void) resetTransforms {
     CGAffineTransform transformZero = CGAffineTransformZero();
     _portraitTransform = transformZero;
-    _landscapeOnePageTransform = transformZero;
-    _landscapeTwoPagesTransform = transformZero;
+    _landscapeTransform = transformZero;
 }
 
 

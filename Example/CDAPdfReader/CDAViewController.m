@@ -33,7 +33,7 @@
         CDAPDFReaderViewController *viewController = (CDAPDFReaderViewController *)segue.destinationViewController;
         NSString *documentPath = [[NSBundle mainBundle] pathForResource:@"drawingwithquartz2d" ofType:@"pdf"];
         [viewController setDocumentPath:documentPath];
-        viewController.orientationLayout = CDAPDFReaderOrientationLayoutPortrait | CDAPDFReaderOrientationLayoutLandscapeTwoPages | CDAPDFReaderOrientationLayoutLandscapeOnePage;
+        viewController.orientationLayout = CDAPDFReaderOrientationLayoutPortrait | CDAPDFReaderOrientationLayoutLandscape;
     }
 }
 

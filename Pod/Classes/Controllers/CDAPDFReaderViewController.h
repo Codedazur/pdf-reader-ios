@@ -17,15 +17,12 @@
  *
  *  CDAPDFReaderOrientationLayoutPortrait           -> Portrait
  *
- *  CDAPDFReaderOrientationLayoutLandscapeOnePage   -> Landscape
+ *  CDAPDFReaderOrientationLayoutLandscape          -> Landscape
  *
- *  CDAPDFReaderOrientationLayoutLandscapeTwoPages  -> Landscape showing 2 pages in portrait, one beside the other
- *  This last option requieres the transition style set to Curl, otherwise it won't work.
- *  In case CDAPDFReaderOrientationLayoutLandscapeOnePage and CDAPDFReaderOrientationLayoutLandscapeTwoPages are both specified, the two pages option will prevail
  *
  *  Values can be combined, so can support several layouts at the same time
  *  @code
- *  orientationLayout = CDAPDFReaderOrientationLayoutPortrait | CDAPDFReaderOrientationLayoutTwoPages;
+ *  orientationLayout = CDAPDFReaderOrientationLayoutPortrait | CDAPDFReaderOrientationLayoutLandscape;
  *  @endcode
  */
 @property (nonatomic, assign) CDAPDFReaderOrientationLayout orientationLayout;
@@ -44,8 +41,6 @@
 /// Indicate whether the Reader supports the Portrait orientation layout or not
 - (BOOL) isPortraitLayoutSupported;
 /// Indicate whether the Reader supports the Landscape orientation layout or not
-- (BOOL) isLandscapeOnePageLayoutSupported;
-/// Indicate whether the Reader can show two pages when the device is in landscape mode and transition style is curl
-- (BOOL) isLandscapeTwoPagesLayoutSupported;
+- (BOOL) isLandscapeLayoutSupported;
 
 @end

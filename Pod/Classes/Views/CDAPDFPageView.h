@@ -15,8 +15,7 @@
 @property (assign, nonatomic) CGPDFPageRef pageRef;
 
 @property (nonatomic, assign) CGAffineTransform portraitTransform;
-@property (nonatomic, assign) CGAffineTransform landscapeOnePageTransform;
-@property (nonatomic, assign) CGAffineTransform landscapeTwoPagesTransform;
+@property (nonatomic, assign) CGAffineTransform landscapeTransform;
 
 - (id) initWithFrame:(CGRect)frame andPDFPage:(CGPDFPageRef)pageRef;
 
