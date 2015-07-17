@@ -14,7 +14,6 @@
 @interface CDAPDFPageViewController ()
 
 @property (nonatomic, strong) CDAPDFPageView *pdfPageView;
-@property (nonatomic, assign) CDAPDFReaderOrientationLayout orientationLayoutApplied;
 
 @end
 
@@ -43,32 +42,11 @@
 - (void) updatePDFPageViewWithPageRef:(CGPDFPageRef)pageRef {
     if (self.pdfPageView.superview != nil) [self.pdfPageView removeFromSuperview];
     self.pdfPageView = [[CDAPDFPageView alloc] initWithFrame:self.view.bounds andPDFPage:self.pageRef];
-    self.orientationLayoutApplied = [self.delegate orientationLayoutForPDFPageViewController:self];
     [self.view addSubview:self.pdfPageView];
 }
 
 - (void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
     [self updatePDFPageViewWithPageRef:self.pageRef];
-}
-
-- (CGAffineTransform) transformForOrientationLayout:(CDAPDFReaderOrientationLayout)orientationLayout {
-    CGAffineTransform transform;
-    
-    switch (orientationLayout) {
-        case CDAPDFReaderOrientationLayoutPortrait:
-            transform = self.pdfPageView.portraitTransform;
-            break;
-            
-        case CDAPDFReaderOrientationLayoutLandscape:
-            transform = self.pdfPageView.landscapeTransform;
-            break;
-            
-        default:
-            transform = CGAffineTransformIdentity;
-            break;
-    }
-    
-    return transform;
 }
 
 @end

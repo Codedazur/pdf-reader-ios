@@ -46,39 +46,4 @@
 }
 
 
-#pragma mark - Getters & Setters
-
-- (void) setPageRef:(CGPDFPageRef)pageRef {
-    _pageRef = pageRef;
-    [self resetTransforms];
-}
-
-- (CGAffineTransform) portraitTransform {
-    if (CGAffineTransformEqualToTransform(_portraitTransform, CGAffineTransformZero())) {
-        CGRect pageRect = CGPDFPageGetBoxRect(self.pageRef, kCGPDFMediaBox);
-        _portraitTransform = pdfAspectFitTransform(pageRect, kPORTRAIT_RECT);
-    }
-    
-    return _portraitTransform;
-}
-
-- (CGAffineTransform) landscapeTransform {
-    if (CGAffineTransformEqualToTransform(_landscapeTransform, CGAffineTransformZero())) {
-        CGRect pageRect = CGPDFPageGetBoxRect(self.pageRef, kCGPDFMediaBox);
-        _landscapeTransform = pdfAspectFitTransform(pageRect, kLANDSCAPE_RECT);
-    }
-    
-    return _landscapeTransform;
-}
-
-
-#pragma mark - Private methods
-
-- (void) resetTransforms {
-    CGAffineTransform transformZero = CGAffineTransformZero();
-    _portraitTransform = transformZero;
-    _landscapeTransform = transformZero;
-}
-
-
 @end
