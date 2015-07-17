@@ -43,21 +43,12 @@
 - (void) updatePDFPageViewWithPageRef:(CGPDFPageRef)pageRef {
     if (self.pdfPageView.superview != nil) [self.pdfPageView removeFromSuperview];
     self.pdfPageView = [[CDAPDFPageView alloc] initWithFrame:self.view.bounds andPDFPage:self.pageRef];
+    self.orientationLayoutApplied = [self.delegate orientationLayoutForPDFPageViewController:self];
     [self.view addSubview:self.pdfPageView];
 }
 
 - (void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    [self applyTransform];
-}
-
-- (void) applyTransform {
-    CDAPDFReaderOrientationLayout newOrientationLayout = [self.delegate orientationLayoutForPDFPageViewController:self];
-    if (newOrientationLayout == self.orientationLayoutApplied) return;
-    
-    if (self.orientationLayoutApplied != CDAPDFReaderOrientationLayoutNone) {
-        self.view.transform = CGAffineTransformInvert([self transformForOrientationLayout:self.orientationLayoutApplied]);
-    }
-    self.view.transform = [self transformForOrientationLayout:newOrientationLayout];
+    [self updatePDFPageViewWithPageRef:self.pageRef];
 }
 
 - (CGAffineTransform) transformForOrientationLayout:(CDAPDFReaderOrientationLayout)orientationLayout {

@@ -22,8 +22,6 @@
 @property (nonatomic, assign) NSUInteger pageIndex;
 @property (nonatomic, assign) CGPDFPageRef pageRef;
 
-- (void) applyTransform;
-
 @end
 
 
