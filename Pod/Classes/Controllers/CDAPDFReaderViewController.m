@@ -12,7 +12,7 @@
 #import "CDAPDFPageViewController.h"
 
 
-@interface CDAPDFReaderViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+@interface CDAPDFReaderViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate, CDAPDFPageViewControllerDelegate>
 
 @property (nonatomic, strong) CDAPDFReaderDocument *readerDocument;
 @property (nonatomic, assign) NSUInteger currentPageIndex;
@@ -72,9 +72,7 @@
     [super viewWillAppear:animated];
     
     _currentPageIndex = 0;
-    CGPDFPageRef firstPageRef = [self.readerDocument pageRefForPageIndex:self.currentPageIndex];
-    CDAPDFPageViewController *firstPDFPageViewController = [self createPDFPageViewControllerWithPageRef:firstPageRef andPageIndex:self.currentPageIndex];
-    [self setViewControllers:@[firstPDFPageViewController] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+    [self initializeCurrentViewControllers];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -131,9 +129,11 @@
     if (UIInterfaceOrientationIsPortrait(orientation) && [self isPortraitLayoutSupported]) {
         self.doubleSided = NO;
         [self setViewControllers:@[currentPageViewController] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+        
         return UIPageViewControllerSpineLocationMin;
     }
     else if (UIInterfaceOrientationIsLandscape(orientation)) {
+        if (self.spineLocation == UIPageViewControllerSpineLocationMid) return UIPageViewControllerSpineLocationMid;
         NSArray *viewControllers;
         if ([self isLandscapeTwoPagesLayoutSupported]) {
             if ([self isCurrentPageOnLeftSide]) {
@@ -152,6 +152,7 @@
         else if ([self isLandscapeOnePageLayoutSupported]) {
             self.doubleSided = NO;
             [self setViewControllers:@[currentPageViewController] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+            
             return UIPageViewControllerSpineLocationMin;
         }
     }
@@ -200,6 +201,43 @@
 }
 
 
+#pragma mark - CDAPDFPageViewController Delegate methods
+
+- (CDAPDFReaderOrientationLayout) orientationLayoutForPDFPageViewController:(CDAPDFPageViewController *)viewController {
+    CDAPDFReaderOrientationLayout orientationLayout = CDAPDFReaderOrientationLayoutNone;
+    if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation) && [self isPortraitLayoutSupported]) {
+        orientationLayout = CDAPDFReaderOrientationLayoutPortrait;
+    }
+    else if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {
+        if ([self isLandscapeTwoPagesLayoutSupported]) {
+            orientationLayout = CDAPDFReaderOrientationLayoutLandscapeTwoPages;
+        }
+        else if ([self isLandscapeOnePageLayoutSupported]) {
+            orientationLayout = CDAPDFReaderOrientationLayoutLandscapeOnePage;
+        }
+    }
+    
+    return orientationLayout;
+}
+
+- (CDAPDFReaderOrientationLayout) orientationLayoutForPDFPageViewController:(CDAPDFPageViewController *)viewController andInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    CDAPDFReaderOrientationLayout orientationLayout = CDAPDFReaderOrientationLayoutNone;
+    if (UIInterfaceOrientationIsPortrait(interfaceOrientation) && [self isPortraitLayoutSupported]) {
+        orientationLayout = CDAPDFReaderOrientationLayoutPortrait;
+    }
+    else if (UIInterfaceOrientationIsLandscape(interfaceOrientation)) {
+        if ([self isLandscapeTwoPagesLayoutSupported]) {
+            orientationLayout = CDAPDFReaderOrientationLayoutLandscapeTwoPages;
+        }
+        else if ([self isLandscapeOnePageLayoutSupported]) {
+            orientationLayout = CDAPDFReaderOrientationLayoutLandscapeOnePage;
+        }
+    }
+    
+    return orientationLayout;
+}
+
+
 #pragma mark - Private methods
 
 - (CDAPDFPageViewController *) createPDFPageViewControllerWithPageRef:(CGPDFPageRef)pageRef andPageIndex:(NSInteger)pageIndex {
@@ -209,6 +247,7 @@
         pdfPageViewController = [CDAPDFPageViewController new];
         pdfPageViewController.pageRef = pageRef;
         pdfPageViewController.pageIndex = pageIndex;
+        pdfPageViewController.delegate = self;
     }
     
     return pdfPageViewController;
@@ -216,6 +255,18 @@
 
 - (BOOL)isCurrentPageOnLeftSide {
     return self.currentPageIndex == 0 || self.currentPageIndex % 2 == 0;
+}
+
+- (void) initializeCurrentViewControllers {
+    CGPDFPageRef firstPageRef = [self.readerDocument pageRefForPageIndex:self.currentPageIndex];
+    CDAPDFPageViewController *firstPDFPageViewController = [self createPDFPageViewControllerWithPageRef:firstPageRef andPageIndex:self.currentPageIndex];
+    NSArray *pages = @[firstPDFPageViewController];
+    if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation) && [self isLandscapeTwoPagesLayoutSupported]) {
+        CGPDFPageRef secondPageRef = [self.readerDocument pageRefForPageIndex:self.currentPageIndex+1];
+        CDAPDFPageViewController *secondPDFPageViewController = [self createPDFPageViewControllerWithPageRef:secondPageRef andPageIndex:self.currentPageIndex+1];
+        pages = @[firstPDFPageViewController, secondPDFPageViewController];
+    }
+    [self setViewControllers:pages direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
 }
 
 @end

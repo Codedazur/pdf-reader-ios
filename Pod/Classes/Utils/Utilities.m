@@ -8,12 +8,17 @@
 
 #import "Utilities.h"
 
-CGAffineTransform aspectFitTransform(CGRect innerRect, CGRect outerRect) {
-    CGFloat scaleFactor = MIN(outerRect.size.width/innerRect.size.width, outerRect.size.height/innerRect.size.height);
+CGAffineTransform pdfAspectFitTransform(CGRect pdfRect, CGRect screenRect) {
+    CGFloat scaleFactor = MIN(screenRect.size.width/pdfRect.size.width, screenRect.size.height/pdfRect.size.height);
     CGAffineTransform scale = CGAffineTransformMakeScale(scaleFactor, scaleFactor);
-    CGRect scaledInnerRect = CGRectApplyAffineTransform(innerRect, scale);
+    CGRect scaledPDFRect = CGRectApplyAffineTransform(pdfRect, scale);
     CGAffineTransform translation =
-    CGAffineTransformMakeTranslation((outerRect.size.width - scaledInnerRect.size.width) / 2 - scaledInnerRect.origin.x,
-                                     (outerRect.size.height - scaledInnerRect.size.height) / 2 - scaledInnerRect.origin.y);
+    CGAffineTransformMakeTranslation((screenRect.size.width - scaledPDFRect.size.width) / 2 - scaledPDFRect.origin.x,
+                                     (screenRect.size.height - scaledPDFRect.size.height) / 2 - scaledPDFRect.origin.y);
     return CGAffineTransformConcat(scale, translation);
+}
+
+/// A transform with all its values set to 0. This is the default value for a CGAffineTransform not initlaized yet.
+CGAffineTransform CGAffineTransformZero () {
+    return CGAffineTransformFromString(@"{0, 0, 0, 0, 0, 0}");
 }

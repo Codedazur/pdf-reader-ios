@@ -7,12 +7,30 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CDAPDFReaderOrientationLayout.h"
 
 @import QuartzCore;
 
+
+@protocol CDAPDFPageViewControllerDelegate;
+
+
 @interface CDAPDFPageViewController : UIViewController
+
+@property (nonatomic, weak) id<CDAPDFPageViewControllerDelegate> delegate;
 
 @property (nonatomic, assign) NSUInteger pageIndex;
 @property (nonatomic, assign) CGPDFPageRef pageRef;
+
+- (void) applyTransform;
+
+@end
+
+
+
+@protocol CDAPDFPageViewControllerDelegate <NSObject>
+
+- (CDAPDFReaderOrientationLayout) orientationLayoutForPDFPageViewController:(CDAPDFPageViewController *)viewController;
+- (CDAPDFReaderOrientationLayout) orientationLayoutForPDFPageViewController:(CDAPDFPageViewController *)viewController andInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation;
 
 @end
