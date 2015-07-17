@@ -12,7 +12,7 @@
 
 #define kPORTRAIT_RECT CGRectMake(0, 0, 768, 1024)
 #define kLANDSCAPE_RECT CGRectMake(0, 0, 1024, 768)
-#define kLANDSCAPE_DOUBLE_SIDED_PAGE_RECT CGRectMake(0, 0, 768, 512)
+
 
 @interface CDAPDFPageView ()
 
@@ -28,6 +28,9 @@
     self.pageRef = pageRef;
     self.backgroundColor = [UIColor clearColor];
     
+    self.portraitTransform = pdfAspectFitTransform(frame, kPORTRAIT_RECT);
+    self.landscapeTransform = pdfAspectFitTransform(frame, kLANDSCAPE_RECT);
+    
     return self;
 }
 
@@ -36,13 +39,33 @@
     CGContextTranslateCTM(ctx, 0.0, rect.size.height);
     CGContextScaleCTM(ctx, 1.0, -1.0);
     CGRect pageRect = CGPDFPageGetBoxRect(self.pageRef, kCGPDFMediaBox);
-    CGContextConcatCTM(ctx, pdfAspectFitTransform(pageRect, CGContextGetClipBoundingBox(ctx)));
     CGContextSetFillColorWithColor(ctx, [UIColor whiteColor].CGColor);
     CGContextFillRect(ctx, pageRect);
     CGContextDrawPDFPage(ctx, self.pageRef);
     [super drawRect:rect];
     UIGraphicsEndImageContext();
     
+}
+
+
+#pragma mark - Getters & Setters
+
+- (CGAffineTransform) portraitTransform {
+    if (CGAffineTransformEqualToTransform(_portraitTransform, CGAffineTransformZero())) {
+        CGRect pageRect = CGPDFPageGetBoxRect(self.pageRef, kCGPDFMediaBox);
+        _portraitTransform = pdfAspectFitTransform(pageRect, kPORTRAIT_RECT);
+    }
+    
+    return _portraitTransform;
+}
+
+- (CGAffineTransform) landscapeTransform {
+    if (CGAffineTransformEqualToTransform(_landscapeTransform, CGAffineTransformZero())) {
+        CGRect pageRect = CGPDFPageGetBoxRect(self.pageRef, kCGPDFMediaBox);
+        _landscapeTransform = pdfAspectFitTransform(pageRect, kLANDSCAPE_RECT);
+    }
+    
+    return _landscapeTransform;
 }
 
 

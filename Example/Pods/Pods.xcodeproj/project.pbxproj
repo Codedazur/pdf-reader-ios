@@ -71,7 +71,6 @@
 		46D519E1FC6E16FA9F3F432C /* KWMatchVerifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 470F9216191B0B91893A6920 /* KWMatchVerifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47082CB3D85474883E8413C0 /* KWEqualMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 790FE1737F913FC01C6CD91D /* KWEqualMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4989134337D2D05119677644 /* NSObject+KiwiVerifierAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F0A00CCE845CD1320EC7A140 /* NSObject+KiwiVerifierAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		49A72DEFC6FF9F33C101D7F7 /* CDAPFReaderThumbnailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA205E13CAFD38FF1B20E75 /* CDAPFReaderThumbnailsViewController.m */; };
 		4C0E5760EABE2BF725093397 /* CDAPDFPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 69C6223330907FAEAC5ECA8E /* CDAPDFPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C74F4A6035B0D123BFE07C1 /* NSNumber+KiwiAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A98FCDF6900DDDB4829B4E08 /* NSNumber+KiwiAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C9AA5C423FE5E2E3B4076CA /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = FB1C2560A495E6DB28B1DEA7 /* Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -127,7 +126,6 @@
 		858BA405A109C6663867455F /* KWContainStringMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 53EE82EEC7D5C53085DB0991 /* KWContainStringMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85B29A86B068460358C4D9E4 /* KWCountType.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A959131478A85ECDA45EC52 /* KWCountType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85B3CF3080212864E6B79B9B /* NSInvocation+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5067BC535C32EA03657FCF5 /* NSInvocation+OCMAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		86645A06FDD2ABC5F8AA819D /* CDAPFReaderThumbnailsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A3C7D2C60E6BF1F594E6ED5E /* CDAPFReaderThumbnailsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8690ABB0B04DF7374E9A6F31 /* KWStringUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = C42BE8C5A69AF4ADF3474C37 /* KWStringUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8699F8ED8CEC9F2FF1F986ED /* Pods-CDAPdfReader_Tests-CDAPdfReader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 51F410F6D672926F7E323BFD /* Pods-CDAPdfReader_Tests-CDAPdfReader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		879E6F5BD1D0C708D9840645 /* KWSymbolicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1CE3A0B5AB640EE0E19EC8 /* KWSymbolicator.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -161,7 +159,6 @@
 		A5BC687CE2CA3CD9B2DB5B2B /* KWReceiveMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C2A90FF7E095973D47B52C2 /* KWReceiveMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A695CECBFD20C8A5002D513D /* KWUserDefinedMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B92477649E4C562CFA6660DD /* KWUserDefinedMatcher.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		A82EAE282D199D8DC37F3537 /* KWNotificationMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4CC668C425E304CB576E8 /* KWNotificationMatcher.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A9727FB64065F7F729E84FF9 /* CDAPFReaderThumbnailsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A3C7D2C60E6BF1F594E6ED5E /* CDAPFReaderThumbnailsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB4CD8D4000BAC083C314D2A /* KWAfterAllNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E9CF03D13BE7A6BD61ABC4 /* KWAfterAllNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB5C6B1762D16E87107FB4C0 /* KWMock.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8DD9674BC6A88B57BBD5B5 /* KWMock.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		AD5EF4A067E5242CB9E43A67 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EE5AAD500CCCC6396B38D3 /* Utilities.m */; };
@@ -182,7 +179,6 @@
 		BF62B6DC80E09A16EEB04626 /* KWRegisterMatchersNode.h in Headers */ = {isa = PBXBuildFile; fileRef = CD2ED9873D50A06D1F9EC296 /* KWRegisterMatchersNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C163198B45202820E8B60179 /* KWReporting.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C74786911247D36543642D /* KWReporting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1898C584250526117866234 /* KWBeforeEachNode.h in Headers */ = {isa = PBXBuildFile; fileRef = C8DDC13C0129D71E17E830CE /* KWBeforeEachNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C1B612A7CAF5C161F1011CE0 /* CDAPFReaderThumbnailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA205E13CAFD38FF1B20E75 /* CDAPFReaderThumbnailsViewController.m */; };
 		C2E214B77C1DBC02C400D3EF /* KWProbe.h in Headers */ = {isa = PBXBuildFile; fileRef = 94CDD5A9A51B6DDF59BF5B75 /* KWProbe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C32AEC6BEF1A478DB8E31C17 /* KWBlockNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F57F6E6474BD936AD35E62 /* KWBlockNode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		C41D4050F02A4B459DBD0F41 /* KWExampleNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B16D7C20BB1D761FEB666B1 /* KWExampleNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -426,7 +422,6 @@
 		9E68A4FF82184EBC027C69BB /* KWStringPrefixMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWStringPrefixMatcher.h; path = Classes/Matchers/KWStringPrefixMatcher.h; sourceTree = "<group>"; };
 		A29CA9576307D05BC929D89D /* KWExistVerifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWExistVerifier.h; path = Classes/Verifiers/KWExistVerifier.h; sourceTree = "<group>"; };
 		A3BA898946A27708AD45F0DB /* KWFutureObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWFutureObject.m; path = Classes/Core/KWFutureObject.m; sourceTree = "<group>"; };
-		A3C7D2C60E6BF1F594E6ED5E /* CDAPFReaderThumbnailsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDAPFReaderThumbnailsViewController.h; sourceTree = "<group>"; };
 		A45662FA052D3965A1495423 /* KWBeforeAllNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWBeforeAllNode.h; path = Classes/Nodes/KWBeforeAllNode.h; sourceTree = "<group>"; };
 		A4CAB20DEF509A588F442AB4 /* KWLetNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWLetNode.m; path = Classes/Nodes/KWLetNode.m; sourceTree = "<group>"; };
 		A574495BA087317259976D86 /* KWConformToProtocolMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWConformToProtocolMatcher.h; path = Classes/Matchers/KWConformToProtocolMatcher.h; sourceTree = "<group>"; };
@@ -472,7 +467,6 @@
 		CB46C0F93DD057F56AABF01D /* KWInvocationCapturer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWInvocationCapturer.m; path = Classes/Core/KWInvocationCapturer.m; sourceTree = "<group>"; };
 		CB4959734E65A5D78205A40C /* KWAfterEachNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWAfterEachNode.h; path = Classes/Nodes/KWAfterEachNode.h; sourceTree = "<group>"; };
 		CD2ED9873D50A06D1F9EC296 /* KWRegisterMatchersNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWRegisterMatchersNode.h; path = Classes/Nodes/KWRegisterMatchersNode.h; sourceTree = "<group>"; };
-		CEA205E13CAFD38FF1B20E75 /* CDAPFReaderThumbnailsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDAPFReaderThumbnailsViewController.m; sourceTree = "<group>"; };
 		CEB0437E218C12CE360BE873 /* KWHaveMatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWHaveMatcher.m; path = Classes/Matchers/KWHaveMatcher.m; sourceTree = "<group>"; };
 		D0DE5FA51E5D16BD2432F9B5 /* CDAPDFPageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDAPDFPageView.m; sourceTree = "<group>"; };
 		D3BF34CB108B076BA237EAA6 /* KWFutureObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWFutureObject.h; path = Classes/Core/KWFutureObject.h; sourceTree = "<group>"; };
@@ -582,8 +576,6 @@
 				0B2B89FEDF3D02F87A5F9EF8 /* CDAPDFPageViewController.m */,
 				164783D4D997469CA84B8518 /* CDAPDFReaderViewController.h */,
 				E13EEFE80FA210D5F2533411 /* CDAPDFReaderViewController.m */,
-				A3C7D2C60E6BF1F594E6ED5E /* CDAPFReaderThumbnailsViewController.h */,
-				CEA205E13CAFD38FF1B20E75 /* CDAPFReaderThumbnailsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1098,7 +1090,6 @@
 				EC59227FA1B1029C3C73C652 /* CDAPDFReaderDocument.h in Headers */,
 				9C3BAA07DE087AACCC446E84 /* CDAPDFReaderOrientationLayout.h in Headers */,
 				12E7F6447AC25B8F67840C0C /* CDAPDFReaderViewController.h in Headers */,
-				86645A06FDD2ABC5F8AA819D /* CDAPFReaderThumbnailsViewController.h in Headers */,
 				8699F8ED8CEC9F2FF1F986ED /* Pods-CDAPdfReader_Tests-CDAPdfReader-umbrella.h in Headers */,
 				4C9AA5C423FE5E2E3B4076CA /* Utilities.h in Headers */,
 			);
@@ -1113,7 +1104,6 @@
 				65C8CB2D01ED119AC25BBFB1 /* CDAPDFReaderDocument.h in Headers */,
 				1C7C98C82550AEBC01D8CAE1 /* CDAPDFReaderOrientationLayout.h in Headers */,
 				C60A566DCAA8D794DF12C5BB /* CDAPDFReaderViewController.h in Headers */,
-				A9727FB64065F7F729E84FF9 /* CDAPFReaderThumbnailsViewController.h in Headers */,
 				4317DE69E574A92088CCD913 /* Pods-CDAPdfReader_Example-CDAPdfReader-umbrella.h in Headers */,
 				41B81311806D1EC5CA44D809 /* Utilities.h in Headers */,
 			);
@@ -1442,7 +1432,6 @@
 				303DAA3A14FAB53AE4EFC9D1 /* CDAPDFPageViewController.m in Sources */,
 				B6491422135E6B64FEB18E51 /* CDAPDFReaderDocument.m in Sources */,
 				3D91E3E692FF17C44583C323 /* CDAPDFReaderViewController.m in Sources */,
-				C1B612A7CAF5C161F1011CE0 /* CDAPFReaderThumbnailsViewController.m in Sources */,
 				0886CB7EDC403D01711C43F6 /* Pods-CDAPdfReader_Tests-CDAPdfReader-dummy.m in Sources */,
 				AD5EF4A067E5242CB9E43A67 /* Utilities.m in Sources */,
 			);
@@ -1463,7 +1452,6 @@
 				30F13F70966EF1873F712C75 /* CDAPDFPageViewController.m in Sources */,
 				75A0AF7BCE9CC2793867507C /* CDAPDFReaderDocument.m in Sources */,
 				E7625B5148B7C657719C1D60 /* CDAPDFReaderViewController.m in Sources */,
-				49A72DEFC6FF9F33C101D7F7 /* CDAPFReaderThumbnailsViewController.m in Sources */,
 				F8163BA9AD8F9E19CD891C75 /* Pods-CDAPdfReader_Example-CDAPdfReader-dummy.m in Sources */,
 				DDD593E2B64EFA42A3A9E49B /* Utilities.m in Sources */,
 			);

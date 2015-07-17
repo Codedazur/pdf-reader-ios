@@ -12,6 +12,7 @@ CGAffineTransform pdfAspectFitTransform(CGRect pdfRect, CGRect screenRect) {
     CGFloat scaleFactor = MIN(screenRect.size.width/pdfRect.size.width, screenRect.size.height/pdfRect.size.height);
     CGAffineTransform scale = CGAffineTransformMakeScale(scaleFactor, scaleFactor);
     CGRect scaledPDFRect = CGRectApplyAffineTransform(pdfRect, scale);
+    
     CGAffineTransform translation =
     CGAffineTransformMakeTranslation((screenRect.size.width - scaledPDFRect.size.width) / 2 - scaledPDFRect.origin.x,
                                      (screenRect.size.height - scaledPDFRect.size.height) / 2 - scaledPDFRect.origin.y);

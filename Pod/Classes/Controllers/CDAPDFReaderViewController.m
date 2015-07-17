@@ -12,7 +12,7 @@
 #import "CDAPDFPageViewController.h"
 
 
-@interface CDAPDFReaderViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+@interface CDAPDFReaderViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate, CDAPDFPageViewControllerDelegate>
 
 @property (nonatomic, strong) CDAPDFReaderDocument *readerDocument;
 @property (nonatomic, assign) NSUInteger currentPageIndex;
@@ -133,6 +133,33 @@
 }
 
 
+#pragma mark - CDAPDFPageViewController Delegate methods
+
+- (CDAPDFReaderOrientationLayout) orientationLayoutForPDFPageViewController:(CDAPDFPageViewController *)viewController {
+    CDAPDFReaderOrientationLayout orientationLayout = CDAPDFReaderOrientationLayoutNone;
+    if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation) && [self isPortraitLayoutSupported]) {
+        orientationLayout = CDAPDFReaderOrientationLayoutPortrait;
+    }
+    else if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation) && [self isLandscapeLayoutSupported]) {
+        orientationLayout = CDAPDFReaderOrientationLayoutLandscape;
+    }
+    
+    return orientationLayout;
+}
+
+- (CDAPDFReaderOrientationLayout) orientationLayoutForPDFPageViewController:(CDAPDFPageViewController *)viewController andInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    CDAPDFReaderOrientationLayout orientationLayout = CDAPDFReaderOrientationLayoutNone;
+    if (UIInterfaceOrientationIsPortrait(interfaceOrientation) && [self isPortraitLayoutSupported]) {
+        orientationLayout = CDAPDFReaderOrientationLayoutPortrait;
+    }
+    else if (UIInterfaceOrientationIsLandscape(interfaceOrientation) && [self isLandscapeLayoutSupported]) {
+        orientationLayout = CDAPDFReaderOrientationLayoutLandscape;
+    }
+    
+    return orientationLayout;
+}
+
+
 #pragma mark - Private methods
 
 - (CDAPDFPageViewController *) createPDFPageViewControllerWithPageRef:(CGPDFPageRef)pageRef andPageIndex:(NSInteger)pageIndex {
@@ -142,6 +169,7 @@
         pdfPageViewController = [CDAPDFPageViewController new];
         pdfPageViewController.pageRef = pageRef;
         pdfPageViewController.pageIndex = pageIndex;
+        pdfPageViewController.delegate = self;
     }
     
     return pdfPageViewController;
