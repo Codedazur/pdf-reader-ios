@@ -1,0 +1,22 @@
+//
+//  CDAPDFPageView.h
+//  Pods
+//
+//  Created by Gerardo Garrido on 14/07/15.
+//
+//
+
+#import <UIKit/UIKit.h>
+
+@import QuartzCore;
+
+@interface CDAPDFPageView : UIView
+
+@property (nonatomic, assign) CGPDFPageRef pageRef;
+
+@property (nonatomic, assign) CGAffineTransform portraitTransform;
+@property (nonatomic, assign) CGAffineTransform landscapeTransform;
+
+- (id) initWithFrame:(CGRect)frame andPDFPage:(CGPDFPageRef)pageRef;
+
+@end
