@@ -27,7 +27,6 @@
     
     self.pageRef = pageRef;
     self.backgroundColor = [UIColor clearColor];
-//    [self setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin| UIViewAutoresizingFlexibleRightMargin| UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth];
     
     return self;
 }
@@ -43,6 +42,7 @@
     CGContextDrawPDFPage(ctx, self.pageRef);
     [super drawRect:rect];
     UIGraphicsEndImageContext();
+    
 }
 
 
