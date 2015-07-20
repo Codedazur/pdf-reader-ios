@@ -15,7 +15,6 @@
 @interface CDAPDFReaderViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (nonatomic, strong) CDAPDFReaderDocument *readerDocument;
-@property (nonatomic, assign) NSUInteger currentPageIndex;
 
 @end
 
@@ -58,7 +57,7 @@
 
 - (void) initializeInternalProperties {
     self.orientationLayout = CDAPDFReaderOrientationLayoutPortrait | CDAPDFReaderOrientationLayoutLandscape;
-    _currentPageIndex = NSNotFound;
+    _currentPageIndex = 0;
     self.dataSource = self;
     self.delegate = self;
 }
@@ -71,7 +70,6 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    _currentPageIndex = 0;
     [self initializeCurrentViewControllers];
 }
 
@@ -85,6 +83,12 @@
 
 - (void) setDocumentPath:(NSString *)pdfDocumentPath {
     self.readerDocument = [[CDAPDFReaderDocument alloc] initWithPDFDocumentPath:pdfDocumentPath];
+}
+
+- (void) setCurrentPageIndex:(NSUInteger)currentPageIndex {
+    _currentPageIndex = currentPageIndex;
+    
+    [self initializeCurrentViewControllers];
 }
 
 - (BOOL) isPortraitLayoutSupported {
@@ -154,6 +158,14 @@
 - (void) initializeCurrentViewControllers {
     CGPDFPageRef firstPageRef = [self.readerDocument pageRefForPageIndex:self.currentPageIndex];
     CDAPDFPageViewController *firstPDFPageViewController = [self createPDFPageViewControllerWithPageRef:firstPageRef andPageIndex:self.currentPageIndex];
+    
+    if (firstPDFPageViewController == NULL) {
+#ifdef DEBUG
+        [NSException raise:NSInvalidArgumentException format:@"%@ - Invalid starting page at page index %ld. PDF document has %lu pages", NSStringFromClass([self class]), self.currentPageIndex, [self.readerDocument numberOfPages]];
+#endif
+        NSLog(@"ERROR!!! %@ - Invalid starting page at page index %ld. PDF document has %lu pages", NSStringFromClass([self class]), self.currentPageIndex, [self.readerDocument numberOfPages]);
+        return;
+    }
     NSArray *pages = @[firstPDFPageViewController];
     [self setViewControllers:pages direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
 }

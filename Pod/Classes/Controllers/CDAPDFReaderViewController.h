@@ -29,7 +29,7 @@
 
 
 /// The current page index starting from 0, or NSNotFound in case no page is shown
-@property (nonatomic, readonly) NSUInteger currentPageIndex;
+@property (nonatomic, assign) NSUInteger currentPageIndex;
 
 /**
  *  Specify the PDF document to be displayed
