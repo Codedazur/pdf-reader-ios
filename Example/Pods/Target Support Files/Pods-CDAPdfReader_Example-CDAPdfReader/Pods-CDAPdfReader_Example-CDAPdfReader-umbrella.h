@@ -4,8 +4,8 @@
 #import "CDAPDFReaderViewController.h"
 #import "CDAPDFReaderDocument.h"
 #import "CDAPDFReaderOrientationLayout.h"
-#import "ReaderContentPage.h"
-#import "ReaderContentView.h"
+#import "CDAPDFReaderContentPage.h"
+#import "CDAPDFReaderContentView.h"
 
 FOUNDATION_EXPORT double CDAPdfReaderVersionNumber;
 FOUNDATION_EXPORT const unsigned char CDAPdfReaderVersionString[];

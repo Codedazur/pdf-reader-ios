@@ -1,5 +1,5 @@
 //
-//	ReaderContentTile.m
+//	ReaderContentView.h
 //	Reader v2.8.6
 //
 //	Created by Julius Oklamcak on 2011-07-01.
@@ -23,49 +23,27 @@
 //	CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "ReaderContentTile.h"
+#import <UIKit/UIKit.h>
 
-@implementation ReaderContentTile
+@class CDAPDFReaderContentView;
+@class CDAPDFReaderContentPage;
 
-#pragma mark - Constants
+@protocol CDAPDFReaderContentViewDelegate <NSObject>
 
-#define LEVELS_OF_DETAIL 16
+@required // Delegate protocols
 
-#pragma mark - ReaderContentTile class methods
+- (void)contentView:(CDAPDFReaderContentView *)contentView touchesBegan:(NSSet *)touches;
 
-+ (CFTimeInterval)fadeDuration
-{
-	return 0.001; // iOS bug (flickering tiles) workaround
-}
+@end
 
-#pragma mark - ReaderContentTile instance methods
+@interface CDAPDFReaderContentView : UIScrollView
 
-- (instancetype)init
-{
-	if ((self = [super init])) // Initialize superclass
-	{
-		self.levelsOfDetail = LEVELS_OF_DETAIL; // Zoom levels
+@property (nonatomic, weak, readwrite) id <CDAPDFReaderContentViewDelegate> message;
 
-		self.levelsOfDetailBias = (LEVELS_OF_DETAIL - 1); // Bias
+- (instancetype)initWithFrame:(CGRect)frame PageRef:(CGPDFPageRef) pageRef page:(NSUInteger)page password:(NSString *)phrase;
 
-		UIScreen *mainScreen = [UIScreen mainScreen]; // Main screen
-
-		CGFloat screenScale = [mainScreen scale]; // Main screen scale
-
-		CGRect screenBounds = [mainScreen bounds]; // Main screen bounds
-
-		CGFloat w_pixels = (screenBounds.size.width * screenScale);
-
-		CGFloat h_pixels = (screenBounds.size.height * screenScale);
-
-		CGFloat max = ((w_pixels < h_pixels) ? h_pixels : w_pixels);
-
-		CGFloat sizeOfTiles = ((max < 512.0f) ? 512.0f : 1024.0f);
-
-		self.tileSize = CGSizeMake(sizeOfTiles, sizeOfTiles);
-	}
-
-	return self;
-}
+- (void)zoomIncrement:(UITapGestureRecognizer *)recognizer;
+- (void)zoomDecrement:(UITapGestureRecognizer *)recognizer;
+- (void)zoomResetAnimated:(BOOL)animated;
 
 @end

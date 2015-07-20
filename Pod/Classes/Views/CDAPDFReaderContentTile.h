@@ -1,5 +1,5 @@
 //
-//	ReaderConstants.m
+//	CDAPDFReaderContentTile.h
 //	Reader v2.8.6
 //
 //	Created by Julius Oklamcak on 2011-07-01.
@@ -23,6 +23,9 @@
 //	CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "ReaderConstants.h"
+#import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
-static NSString *const kReaderCopyrightNotice = @"Reader v2.x.y • Copyright © 2011-2015 Julius Oklamcak. All rights reserved.";
+@interface CDAPDFReaderContentTile : CATiledLayer
+
+@end

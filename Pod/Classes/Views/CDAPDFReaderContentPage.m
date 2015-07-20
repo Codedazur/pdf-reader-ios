@@ -1,5 +1,5 @@
 //
-//	ReaderContentPage.m
+//	CDAPDFReaderContentPage.m
 //	Reader v2.8.6
 //
 //	Created by Julius Oklamcak on 2011-07-01.
@@ -23,11 +23,11 @@
 //	CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "ReaderConstants.h"
-#import "ReaderContentPage.h"
-#import "ReaderContentTile.h"
+#import "CDAPDFReaderConstants.h"
+#import "CDAPDFReaderContentPage.h"
+#import "CDAPDFReaderContentTile.h"
 
-@implementation ReaderContentPage
+@implementation CDAPDFReaderContentPage
 {
 	CGPDFPageRef _PDFPageRef;
 
@@ -38,14 +38,14 @@
 	CGFloat _pageOffsetY;
 }
 
-#pragma mark - ReaderContentPage class methods
+#pragma mark - CDAPDFReaderContentPage class methods
 
 + (Class)layerClass
 {
-	return [ReaderContentTile class];
+	return [CDAPDFReaderContentTile class];
 }
 
-#pragma mark - ReaderContentPage instance methods
+#pragma mark - CDAPDFReaderContentPage instance methods
 - (instancetype)initWithFrame:(CGRect)frame
 {
 	if ((self = [super initWithFrame:frame]))
@@ -101,7 +101,7 @@
 
     viewRect.size = CGSizeMake(page_w, page_h); // View size
 
-	ReaderContentPage *view = [self initWithFrame:viewRect];
+	CDAPDFReaderContentPage *view = [self initWithFrame:viewRect];
 
 	return view;
 }
@@ -133,7 +133,7 @@
 
 - (void)drawLayer:(CATiledLayer *)layer inContext:(CGContextRef)context
 {
-	ReaderContentPage *readerContentPage = self; // Retain self
+	CDAPDFReaderContentPage *readerContentPage = self; // Retain self
 
 	CGContextSetRGBFillColor(context, 1.0f, 1.0f, 1.0f, 1.0f); // White
 

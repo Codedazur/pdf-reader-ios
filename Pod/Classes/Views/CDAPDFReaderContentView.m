@@ -23,23 +23,23 @@
 //	CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "ReaderConstants.h"
-#import "ReaderContentView.h"
-#import "ReaderContentPage.h"
+#import "CDAPDFReaderConstants.h"
+#import "CDAPDFReaderContentView.h"
+#import "CDAPDFReaderContentPage.h"
 
 #import <QuartzCore/QuartzCore.h>
 
-@interface ReaderContentView () <UIScrollViewDelegate>
+@interface CDAPDFReaderContentView () <UIScrollViewDelegate>
 
 @end
 
-@implementation ReaderContentView
+@implementation CDAPDFReaderContentView
 {
 	UIView *theContainerView;
 
 	UIUserInterfaceIdiom userInterfaceIdiom;
 
-	ReaderContentPage *theContentPage;
+	CDAPDFReaderContentPage *theContentPage;
 
 	CGFloat realMaximumZoom;
 	CGFloat tempMaximumZoom;
@@ -78,7 +78,7 @@ static inline CGFloat zoomScaleThatFits(CGSize target, CGSize source)
 
 + (void)initialize
 {
-	if (self == [ReaderContentView self]) // Do once - iOS 8.0 UIScrollView bug workaround
+	if (self == [CDAPDFReaderContentView self]) // Do once - iOS 8.0 UIScrollView bug workaround
 	{
 		if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) // Not iPads
 		{
@@ -137,7 +137,7 @@ static inline CGFloat zoomScaleThatFits(CGSize target, CGSize source)
 
 		userInterfaceIdiom = [UIDevice currentDevice].userInterfaceIdiom; // User interface idiom
 
-        theContentPage = [[ReaderContentPage alloc] initWithPageRef:pageRef];
+        theContentPage = [[CDAPDFReaderContentPage alloc] initWithPageRef:pageRef];
 
 		if (theContentPage != nil) // Must have a valid and initialized content page
 		{

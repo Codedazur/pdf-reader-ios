@@ -1,5 +1,5 @@
 //
-//	ReaderContentTile.h
+//	CDAPDFReaderConstants.h
 //	Reader v2.8.6
 //
 //	Created by Julius Oklamcak on 2011-07-01.
@@ -23,9 +23,17 @@
 //	CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
+#if !__has_feature(objc_arc)
+	#error ARC (-fobjc-arc) is required to build this code.
+#endif
 
-@interface ReaderContentTile : CATiledLayer
+#import <Foundation/Foundation.h>
 
-@end
+#define READER_FLAT_UI TRUE
+#define READER_SHOW_SHADOWS TRUE
+#define READER_ENABLE_THUMBS TRUE
+#define READER_DISABLE_RETINA FALSE
+#define READER_ENABLE_PREVIEW TRUE
+#define READER_DISABLE_IDLE FALSE
+#define READER_STANDALONE FALSE
+#define READER_BOOKMARKS TRUE

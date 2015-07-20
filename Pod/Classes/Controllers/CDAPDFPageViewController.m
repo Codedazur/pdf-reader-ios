@@ -8,11 +8,11 @@
 
 #import "CDAPDFPageViewController.h"
 
-#import "ReaderContentView.h"
+#import "CDAPDFReaderContentView.h"
 
 @interface CDAPDFPageViewController ()
 
-@property (nonatomic, strong) ReaderContentView *pdfPageView;
+@property (nonatomic, strong) CDAPDFReaderContentView *pdfPageView;
 @end
 
 @implementation CDAPDFPageViewController
@@ -34,7 +34,7 @@
 
 - (void) updatePDFPageViewWithPageRef:(CGPDFPageRef)pageRef {
     if (self.pdfPageView.superview != nil) [self.pdfPageView removeFromSuperview];
-    self.pdfPageView = [[ReaderContentView alloc] initWithFrame:self.view.bounds PageRef:pageRef page:0 password:@""];
+    self.pdfPageView = [[CDAPDFReaderContentView alloc] initWithFrame:self.view.bounds PageRef:pageRef page:0 password:@""];
     [self.view addSubview:self.pdfPageView];
 }
 

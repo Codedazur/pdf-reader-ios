@@ -1,5 +1,5 @@
 //
-//	ReaderContentView.h
+//	CDAPDFReaderContentPage.h
 //	Reader v2.8.6
 //
 //	Created by Julius Oklamcak on 2011-07-01.
@@ -25,26 +25,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class ReaderContentView;
-@class ReaderContentPage;
-@class ReaderContentThumb;
+@interface CDAPDFReaderContentPage : UIView
 
-@protocol ReaderContentViewDelegate <NSObject>
-
-@required // Delegate protocols
-
-- (void)contentView:(ReaderContentView *)contentView touchesBegan:(NSSet *)touches;
-
-@end
-
-@interface ReaderContentView : UIScrollView
-
-@property (nonatomic, weak, readwrite) id <ReaderContentViewDelegate> message;
-
-- (instancetype)initWithFrame:(CGRect)frame PageRef:(CGPDFPageRef) pageRef page:(NSUInteger)page password:(NSString *)phrase;
-
-- (void)zoomIncrement:(UITapGestureRecognizer *)recognizer;
-- (void)zoomDecrement:(UITapGestureRecognizer *)recognizer;
-- (void)zoomResetAnimated:(BOOL)animated;
-
+- (instancetype)initWithPageRef:(CGPDFPageRef)pageRef;
 @end
