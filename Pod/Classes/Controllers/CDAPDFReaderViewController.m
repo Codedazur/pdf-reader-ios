@@ -62,20 +62,10 @@
     self.delegate = self;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     [self initializeCurrentViewControllers];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -153,10 +143,6 @@
     }
     
     return pdfPageViewController;
-}
-
-- (BOOL)isCurrentPageOnLeftSide {
-    return self.currentPageIndex == 0 || self.currentPageIndex % 2 == 0;
 }
 
 - (void) initializeCurrentViewControllers {

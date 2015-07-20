@@ -2,11 +2,8 @@
 
 #import "CDAPDFPageViewController.h"
 #import "CDAPDFReaderViewController.h"
-#import "CDAPFReaderThumbnailsViewController.h"
 #import "CDAPDFReaderDocument.h"
 #import "CDAPDFReaderOrientationLayout.h"
-#import "Utilities.h"
-#import "CDAPDFPageView.h"
 #import "ReaderContentPage.h"
 #import "ReaderContentView.h"
 
