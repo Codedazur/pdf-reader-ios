@@ -67,6 +67,44 @@
     return self;
 }
 
+- (id) initWithPDFRefPages:(NSArray *) pdfRefPages {
+    if (!(self = [super init])) return nil;
+    
+    if (pdfRefPages.count == 0) {
+#ifdef DEBUG
+        [NSException raise:NSInvalidArgumentException format:@"%@ - pdfRefPages can't be empty", NSStringFromClass([self class])];
+#endif
+        NSLog(@"ERROR!!! %@ - pdfRefPages can't be empty", NSStringFromClass([self class]));
+        return nil;
+    }
+    
+    NSMutableArray *tempPages = [NSMutableArray arrayWithCapacity:pdfRefPages.count];
+    for (NSInteger i = 0; i < pdfRefPages.count; i++) {
+        CGPDFPageRef pageRef = (__bridge CGPDFPageRef)[pdfRefPages objectAtIndex:i];
+        
+        if (CFGetTypeID(pageRef) == CGPDFPageGetTypeID()) {
+            [tempPages addObject:(__bridge id)(pageRef)];
+        }
+        else {
+            pageRef = NULL;
+            NSLog(@"WARNING!!! %@ - page at index %lu is not a CGPDFPageRef, will try to continue the execution removing this object from the reader.", NSStringFromClass([self class]), i);
+        }
+    }
+    
+    if (tempPages.count == 0) {
+#ifdef DEBUG
+        [NSException raise:NSInvalidArgumentException format:@"%@ - none of the objects passed were a CGPDFPageRef", NSStringFromClass([self class])];
+#endif
+        NSLog(@"ERROR!!! %@ - none of the objects passed were a CGPDFPageRef", NSStringFromClass([self class]));
+        return nil;
+    }
+    
+    self.pdfPages = tempPages;
+    _numberOfPages = self.pdfPages.count;
+    
+    return self;
+}
+
 
 #pragma mark - Public methods
 

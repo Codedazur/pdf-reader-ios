@@ -85,6 +85,10 @@
     self.readerDocument = [[CDAPDFReaderDocument alloc] initWithPDFDocumentPath:pdfDocumentPath];
 }
 
+- (void) setPDFPagesRef:(NSArray *)pdfPagesRef {
+    self.readerDocument = [[CDAPDFReaderDocument alloc] initWithPDFRefPages:pdfPagesRef];
+}
+
 - (void) setCurrentPageIndex:(NSUInteger)currentPageIndex {
     _currentPageIndex = currentPageIndex;
     

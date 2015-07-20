@@ -38,6 +38,13 @@
  */
 - (void) setDocumentPath:(NSString *)pdfDocumentPath;
 
+/**
+ *  Specify a group of CGPDFPageRef to be shown as a normal PDF document, even if they exist just in memory.
+ *
+ *  @param pdfPagesRef An array of CGPDFPageRef
+ */
+- (void) setPDFPagesRef:(NSArray *)pdfPagesRef;
+
 /// Indicate whether the Reader supports the Portrait orientation layout or not
 - (BOOL) isPortraitLayoutSupported;
 /// Indicate whether the Reader supports the Landscape orientation layout or not

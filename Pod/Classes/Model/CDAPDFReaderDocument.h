@@ -23,6 +23,15 @@
 - (id) initWithPDFDocumentPath:(NSString *) pdfPath;
 
 /**
+ *  Specify a group of CGPDFPageRef to be shown as a normal PDF document, even if they exist just in memory.
+ *
+ *  @param pdfRefPages An array of CGPDFPageRef
+ *
+ *  @return An initialized object, or nil if an object could not be created (in case of debugging it will arise and exception instead).
+ */
+- (id) initWithPDFRefPages:(NSArray *) pdfRefPages;
+
+/**
  *  Return the specified PDF page of the PDF document passed in the constructor.
  *
  *  @param pageIndex the number of the desired page starting from 0.
