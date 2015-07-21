@@ -19,11 +19,9 @@
         UIViewController<CDAPdfThumbsViewControllerProtocol> *thumbsVC = [segue destinationViewController];
         [self setThumbsViewController:thumbsVC];
     }else if ([segue.identifier isEqualToString:@"pdf-reader-container"]) {
-
-        NSString *documentPath = [[NSBundle mainBundle] pathForResource:@"drawingwithquartz2d" ofType:@"pdf"];        
         UIViewController<CDAPdfReaderProtocol> *pdfVC = [segue destinationViewController];
-        [pdfVC setDocumentPath:documentPath];
-        pdfVC.orientationLayout = CDAPDFReaderOrientationLayoutPortrait | CDAPDFReaderOrientationLayoutLandscape;
+        [pdfVC setDocumentPath:self.documentPath];
+        pdfVC.orientationLayout = self.orientationLayout;
         [self setPdfReaderController:pdfVC];
     }
 }

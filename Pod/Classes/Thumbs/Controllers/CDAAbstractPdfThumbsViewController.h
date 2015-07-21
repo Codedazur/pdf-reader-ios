@@ -10,5 +10,5 @@
 #import "CDAPdfThumbsViewControllerProtocol.h"
 @interface CDAAbstractPdfThumbsViewController : UIViewController<CDAPdfThumbsViewControllerProtocol,UICollectionViewDelegate, UICollectionViewDataSource>
 - (UICollectionView *)collectionView;
-- (void) setCellNibName:(NSString *)nibName;
+- (NSString *)cellIdentifier;
 @end

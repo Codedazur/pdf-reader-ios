@@ -14,7 +14,7 @@
 @end
 
 @implementation CDAAbstractPdfReaderWithThumbsViewController
-@synthesize thumbsViewController = _thumbsViewController, pdfReaderController = _pdfReaderController;
+@synthesize thumbsViewController = _thumbsViewController, pdfReaderController = _pdfReaderController, documentPath = _documentPath, orientationLayout = _orientationLayout;
 
 - (void)setThumbsViewController:(UIViewController<CDAPdfThumbsViewControllerProtocol> *)thumbsViewController{
     _thumbsViewController = thumbsViewController;
@@ -38,6 +38,7 @@
     //TODO throw inheritance exception
 }
 
+#pragma mark - Heloper
 - (UIImage *)thumbImageForIndexPath:(NSIndexPath *)indexPath WithFrame:(CGRect)frame{
     CGPDFPageRef page = [self.pdfReaderController.readerDocument pageRefForPageIndex:indexPath.row];
     

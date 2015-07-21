@@ -9,7 +9,7 @@
 #import "CDAAbstractPdfThumbsViewController.h"
 
 @interface CDAAbstractPdfThumbsViewController ()
-@property (nonatomic, strong)NSString *cellNibName;
+
 @end
 
 @implementation CDAAbstractPdfThumbsViewController
@@ -19,19 +19,19 @@
     //TODO overwrite exception
     return nil;
 }
-- (void) setCellNibName:(NSString *)nibName{
-    _cellNibName = nibName;
+- (NSString *)cellIdentifier{
+    //TODO overwrite
+    return nil;
 }
+
 - (void)viewDidLoad{
-    UINib *nib = [UINib nibWithNibName:self.cellNibName bundle:nil];
-    [self.collectionView registerNib:nib forCellWithReuseIdentifier:self.cellNibName];
-    
+    [super viewDidLoad];
     [[self collectionView] setDelegate:self];
     [[self collectionView] setDataSource:self];
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICollectionViewCell<CDAPdfThumbProtocol> *cell = [collectionView dequeueReusableCellWithReuseIdentifier:self.cellNibName forIndexPath:indexPath];
+    UICollectionViewCell<CDAPdfThumbProtocol> *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[self cellIdentifier] forIndexPath:indexPath];
     
     [self.dataSource thumbsVC:self setupThumb:cell OnIndexPath:indexPath];
 

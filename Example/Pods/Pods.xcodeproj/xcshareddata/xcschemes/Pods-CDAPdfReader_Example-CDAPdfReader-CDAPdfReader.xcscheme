@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "081DA01D9CE33EA8806DF14C"
+               BlueprintIdentifier = "1AC6AE9736E41FDBC8806062"
                BuildableName = "CDAPdfReader.bundle"
                BlueprintName = "Pods-CDAPdfReader_Example-CDAPdfReader-CDAPdfReader"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -7,15 +7,17 @@
 //
 
 #import "CDABasePdfThumbsViewController.h"
-#import "CDABasePdfThumbViewCell.h"
 @interface CDABasePdfThumbsViewController ()
+
 @end
 
 @implementation CDABasePdfThumbsViewController
-- (void)awakeFromNib{
-    [self setCellNibName:NSStringFromClass([CDABasePdfThumbViewCell class])];
+- (UICollectionView *)collectionView{
+    return (UICollectionView *)[self.view viewWithTag:1000];
 }
 - (void)viewDidLoad{
+    UINib *nib = [UINib nibWithNibName:[self cellIdentifier] bundle:nil];
+    [[self collectionView] registerNib:nib forCellWithReuseIdentifier:[self cellIdentifier]];
     [super viewDidLoad];
 }
 @end

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "CDAAbstractPdfThumbsViewController.h"
 @interface CDABasePdfThumbsViewController : CDAAbstractPdfThumbsViewController
-
+@property (nonatomic, strong)IBInspectable NSString *cellIdentifier;
 @end

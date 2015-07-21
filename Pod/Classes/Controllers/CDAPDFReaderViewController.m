@@ -73,10 +73,12 @@
 
 - (void) setDocumentPath:(NSString *)pdfDocumentPath {
     self.readerDocument = [[CDAPDFReaderDocument alloc] initWithPDFDocumentPath:pdfDocumentPath];
+    [self initializeCurrentViewControllers];
 }
 
 - (void) setPDFPagesRef:(NSArray *)pdfPagesRef {
     self.readerDocument = [[CDAPDFReaderDocument alloc] initWithPDFRefPages:pdfPagesRef];
+    [self initializeCurrentViewControllers];
 }
 
 - (void) setCurrentPageIndex:(NSUInteger)currentPageIndex {
@@ -146,6 +148,7 @@
 }
 
 - (void) initializeCurrentViewControllers {
+    if(!self.readerDocument)return;
     CGPDFPageRef firstPageRef = [self.readerDocument pageRefForPageIndex:self.currentPageIndex];
     CDAPDFPageViewController *firstPDFPageViewController = [self createPDFPageViewControllerWithPageRef:firstPageRef andPageIndex:self.currentPageIndex];
     
