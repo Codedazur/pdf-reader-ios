@@ -36,6 +36,7 @@
 #pragma mark - CDAThumbVCDelegate
 - (void)thumbsVC:(id)thumbsVC didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     //TODO throw inheritance exception
+    self.pdfReaderController.currentPageIndex = indexPath.row;
 }
 
 #pragma mark - Heloper

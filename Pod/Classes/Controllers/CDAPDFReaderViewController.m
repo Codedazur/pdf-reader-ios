@@ -82,8 +82,8 @@
 }
 
 - (void) setCurrentPageIndex:(NSUInteger)currentPageIndex {
+    if(_currentPageIndex == currentPageIndex)return;
     _currentPageIndex = currentPageIndex;
-    
     [self initializeCurrentViewControllers];
 }
 
