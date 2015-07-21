@@ -14,12 +14,12 @@
 
 @interface CDAPDFReaderViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
-@property (nonatomic, strong) CDAPDFReaderDocument *readerDocument;
+//@property (nonatomic, strong) CDAPDFReaderDocument *readerDocument;
 
 @end
 
 @implementation CDAPDFReaderViewController
-
+@synthesize readerDocument = _readerDocument, orientationLayout = _orientationLayout, currentPageIndex = _currentPageIndex;
 
 #pragma mark - Lifecycle methods
 

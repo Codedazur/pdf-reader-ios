@@ -7,8 +7,8 @@
 //
 
 #import "CDAViewController.h"
-
-@import CDAPdfReader;
+#import "CDAPDFReaderViewController.h"
+//@import CDAPdfReader;
 
 @interface CDAViewController ()
 
