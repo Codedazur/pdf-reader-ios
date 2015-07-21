@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/Controllers/CDAPDFReaderViewController.h
+../../../../../Pod/Classes/Core/Controllers/CDAPDFReaderViewController.h

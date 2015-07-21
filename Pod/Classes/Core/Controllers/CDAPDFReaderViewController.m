@@ -154,9 +154,9 @@
     
     if (firstPDFPageViewController == NULL) {
 #ifdef DEBUG
-        [NSException raise:NSInvalidArgumentException format:@"%@ - Invalid starting page at page index %ld. PDF document has %lu pages", NSStringFromClass([self class]), self.currentPageIndex, [self.readerDocument numberOfPages]];
+        [NSException raise:NSInvalidArgumentException format:@"%@ - Invalid starting page at page index %d. PDF document has %d pages", NSStringFromClass([self class]), self.currentPageIndex, [self.readerDocument numberOfPages]];
 #endif
-        NSLog(@"ERROR!!! %@ - Invalid starting page at page index %ld. PDF document has %lu pages", NSStringFromClass([self class]), self.currentPageIndex, [self.readerDocument numberOfPages]);
+        NSLog(@"ERROR!!! %@ - Invalid starting page at page index %d. PDF document has %d pages", NSStringFromClass([self class]), self.currentPageIndex, [self.readerDocument numberOfPages]);
         return;
     }
     NSArray *pages = @[firstPDFPageViewController];

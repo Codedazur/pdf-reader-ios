@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/Views/CDAPDFReaderContentPage.h
+../../../../../Pod/Classes/Core/Views/CDAPDFReaderContentPage.h

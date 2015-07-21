@@ -3,6 +3,11 @@
 #import "CDAPDFPageViewController.h"
 #import "CDAPDFReaderViewController.h"
 #import "CDAPDFReaderDocument.h"
+#import "CDAPDFReaderOrientationLayout.h"
+#import "CDAPDFReaderConstants.h"
+#import "CDAPDFReaderContentPage.h"
+#import "CDAPDFReaderContentTile.h"
+#import "CDAPDFReaderContentView.h"
 #import "CDAAbstractPdfReaderWithThumbsViewController.h"
 #import "CDABaseSBPdfReaderWithThumbsViewController.h"
 #import "CDAPdfReaderProtocol.h"
@@ -13,12 +18,6 @@
 #import "CDAPdfThumbsDataSourceProtocol.h"
 #import "CDAPdfThumbsDelegateProtocol.h"
 #import "CDAPdfThumbsViewControllerProtocol.h"
-#import "CDABasePdfThumbViewCell.h"
-#import "CDAPDFReaderOrientationLayout.h"
-#import "CDAPDFReaderConstants.h"
-#import "CDAPDFReaderContentPage.h"
-#import "CDAPDFReaderContentTile.h"
-#import "CDAPDFReaderContentView.h"
 
 FOUNDATION_EXPORT double CDAPdfReaderVersionNumber;
 FOUNDATION_EXPORT const unsigned char CDAPdfReaderVersionString[];
