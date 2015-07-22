@@ -76,7 +76,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Q4-QH-olU">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
-                                    <segue destination="pUY-nt-Fm5" kind="embed" identifier="pdf-reader-container" id="JZM-b2-ZBG"/>
+                                    <segue destination="glv-kN-CSb" kind="embed" identifier="pdf-reader-container" id="DSm-OD-NOL"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Far-HG-uY5">
@@ -106,6 +106,14 @@
             <point key="canvasLocation" x="52" y="1140"/>
         </scene>
         <!--Reader View Controller-->
+        <scene sceneID="odu-Wt-26H">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="glv-kN-CSb" customClass="CDAPDFReaderViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7D-aH-hUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="2012"/>
+        </scene>
+        <!--Reader View Controller-->
         <scene sceneID="Yzf-PG-LGr">
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="IpH-5g-hdz" customClass="CDAPDFReaderViewController" sceneMemberID="viewController"/>
@@ -120,25 +128,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1f2-m5-bee" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="756" y="639"/>
-        </scene>
-        <!--Reader View Controller-->
-        <scene sceneID="iUY-Th-yJu">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="pUY-nt-Fm5" customClass="CDAPDFReaderViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TBQ-rs-owm"/>
-                        <viewControllerLayoutGuide type="bottom" id="khJ-XU-dMs"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Q6Z-cR-5co">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HEK-CS-LUF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="58" y="1938"/>
         </scene>
         <!--Base Pdf Thumbs View Controller-->
         <scene sceneID="BaM-mI-cvA">

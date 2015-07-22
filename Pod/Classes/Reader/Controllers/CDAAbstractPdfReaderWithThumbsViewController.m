@@ -7,7 +7,7 @@
 //
 
 #import "CDAAbstractPdfReaderWithThumbsViewController.h"
-
+#import "CDAPdfReaderUtils.h"
 
 @interface CDAAbstractPdfReaderWithThumbsViewController ()
 
@@ -27,7 +27,8 @@
 
 #pragma mark - CDAThumbVCDataSource
 - (void)thumbsVC:(UIViewController *)thumbsVC setupThumb:(UIView<CDAPdfThumbProtocol> *)thumb OnIndexPath:(NSIndexPath *)indexPath{
-    [thumb setImage:[self thumbImageForIndexPath:indexPath WithFrame:thumb.frame]];
+    CGPDFPageRef page = [self.pdfReaderController.readerDocument pageRefForPageIndex:indexPath.row];
+    [thumb setImage:[CDAPdfReaderUtils thumbImageFromPageRef:page WithFrame:thumb.frame]];
 }
 - (NSInteger)thumbsVC:(UIViewController *)thumbsVC numberOfItemsInSection:(NSInteger)section{
     return [self.pdfReaderController.readerDocument numberOfPages];
@@ -37,27 +38,5 @@
 - (void)thumbsVC:(id)thumbsVC didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     //TODO throw inheritance exception
     self.pdfReaderController.currentPageIndex = indexPath.row;
-}
-
-#pragma mark - Heloper
-- (UIImage *)thumbImageForIndexPath:(NSIndexPath *)indexPath WithFrame:(CGRect)frame{
-    CGPDFPageRef page = [self.pdfReaderController.readerDocument pageRefForPageIndex:indexPath.row];
-    
-    CGRect rect = frame;
-    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0.0f);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGRect pageRect = CGPDFPageGetBoxRect(page, kCGPDFMediaBox);
-    CGContextSetTextMatrix(context, CGAffineTransformIdentity);
-    CGContextTranslateCTM(context, 0, frame.size.height);
-    CGContextScaleCTM(context, frame.size.width / pageRect.size.width, - frame.size.height / pageRect.size.height);
-    
-    CGContextSetFillColorWithColor(context, [[UIColor whiteColor] CGColor]);
-    CGContextFillEllipseInRect(context, rect);
-    CGContextDrawPDFPage(context, page);
-    
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
 }
 @end

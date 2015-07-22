@@ -13,9 +13,6 @@
 
 
 @interface CDAPDFReaderViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
-
-//@property (nonatomic, strong) CDAPDFReaderDocument *readerDocument;
-
 @end
 
 @implementation CDAPDFReaderViewController

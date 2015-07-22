@@ -101,6 +101,9 @@
 		5FEA4A5A6A3EE3BFBF2BF7FC /* KWBlockRaiseMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C5201324F1B1D830DB44D /* KWBlockRaiseMatcher.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		61765DD01B9ED90DB4915F53 /* KWDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 738E8D6B1C85437F71BD9F6E /* KWDeviceInfo.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		6199F848E7CD92A8F90B8723 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD07B2628B71E662B037FBBC /* Foundation.framework */; };
+		63ECE9101B5F7B9100317877 /* CDAPdfReaderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ECE90D1B5F7AF400317877 /* CDAPdfReaderUtils.m */; };
+		63ECE9111B5F7B9400317877 /* CDAPdfReaderUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 63ECE90C1B5F7AF400317877 /* CDAPdfReaderUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63ECE9141B5F83E800317877 /* CDAPdfReaderProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 63ECE9131B5F83E800317877 /* CDAPdfReaderProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		647F766D603C6A64B7643A46 /* Kiwi.h in Headers */ = {isa = PBXBuildFile; fileRef = 23A5CAB0E8BFE817D64B93AF /* Kiwi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64D642863CCFC54CBEEEA306 /* KWStringPrefixMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 84679DCEB400A5745FB363A9 /* KWStringPrefixMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		676A58EEABD8339474E79E48 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5616D38510CECB24FDDC7ED /* XCTest.framework */; };
@@ -180,7 +183,6 @@
 		AAE00C5B5F52137C5A0FC6B0 /* CDAPDFReaderContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = BBC910DE3F1E0EA05FE2048F /* CDAPDFReaderContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB055AF4CDEDBB3550079D91 /* KWItNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D95B4837452458F9A308C65 /* KWItNode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		AB51862319262FBC34F45A30 /* KWBeEmptyMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F96B85D7C17261FE67EF27 /* KWBeEmptyMatcher.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		AB949A20FAB552932309B077 /* CDAPdfReaderProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D069E3402C61E96EBD7E883 /* CDAPdfReaderProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC6FE7A00C3B16C2F923E94A /* KWCaptureSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05CDD483DCF474D4354BCF8B /* KWCaptureSpy.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		AF9F3A68837053E00D916107 /* CDAPdfThumbsDataSourceProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 292601F8662079FE7FD0AEE1 /* CDAPdfThumbsDataSourceProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B04E0FD14306A9132674394E /* KWWorkarounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D0A3BED603618762E43F1C /* KWWorkarounds.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -190,7 +192,6 @@
 		B37A0FC54E0D2843AA66C110 /* KWBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E5BFB691D7BD193CDEB98 /* KWBlock.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		B38C9FF7772CA47654249655 /* CDAPDFReaderContentTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B36B81E86E5DC25AA30A156 /* CDAPDFReaderContentTile.m */; };
 		B3A1D8E64D94367FFE5DDECC /* KWContextNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F8EF35BF6102872050AAC41 /* KWContextNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B5164B4233ECA3175AD81A1F /* CDAPdfReaderProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D069E3402C61E96EBD7E883 /* CDAPdfReaderProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5EA7BF1C3B6D495CF336431 /* KWContainStringMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = F76B15B8856DED81F1C2FE18 /* KWContainStringMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B74075BA5CA1D379FB39A038 /* CDAPdfThumbsViewControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C6F16D54CF817DBABEFA8D4 /* CDAPdfThumbsViewControllerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7466677AC50497F3C8731E2 /* KWExampleSuite.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B6EE51C33F6041264C33314 /* KWExampleSuite.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -344,7 +345,6 @@
 		2ACF855AAFF99A917050D874 /* KiwiConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KiwiConfiguration.h; path = Classes/Core/KiwiConfiguration.h; sourceTree = "<group>"; };
 		2B36B81E86E5DC25AA30A156 /* CDAPDFReaderContentTile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDAPDFReaderContentTile.m; sourceTree = "<group>"; };
 		2C5B1B3A595908E83BB13E7C /* KWExistVerifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWExistVerifier.h; path = Classes/Verifiers/KWExistVerifier.h; sourceTree = "<group>"; };
-		2D069E3402C61E96EBD7E883 /* CDAPdfReaderProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDAPdfReaderProtocol.h; sourceTree = "<group>"; };
 		2D364E72756D54E77A671D53 /* KWBeEmptyMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWBeEmptyMatcher.h; path = Classes/Matchers/KWBeEmptyMatcher.h; sourceTree = "<group>"; };
 		316C3AB44EE8D1F80A83DCE5 /* KWMessageTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWMessageTracker.h; path = Classes/Core/KWMessageTracker.h; sourceTree = "<group>"; };
 		33C422C779FBF3BCA99AFC87 /* Pods-CDAPdfReader_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDAPdfReader_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -393,6 +393,9 @@
 		6116E066960CE365378C24CE /* KWStub.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWStub.m; path = Classes/Stubbing/KWStub.m; sourceTree = "<group>"; };
 		635752A11E5FFD24B6BC57B1 /* KWFutureObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWFutureObject.h; path = Classes/Core/KWFutureObject.h; sourceTree = "<group>"; };
 		6379D9AE29590B33EEF31CB2 /* NSNumber+KiwiAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+KiwiAdditions.m"; path = "Classes/Core/NSNumber+KiwiAdditions.m"; sourceTree = "<group>"; };
+		63ECE90C1B5F7AF400317877 /* CDAPdfReaderUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAPdfReaderUtils.h; sourceTree = "<group>"; };
+		63ECE90D1B5F7AF400317877 /* CDAPdfReaderUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAPdfReaderUtils.m; sourceTree = "<group>"; };
+		63ECE9131B5F83E800317877 /* CDAPdfReaderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAPdfReaderProtocol.h; sourceTree = "<group>"; };
 		650A812185AE0EC78C60E098 /* CDAPDFReaderViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDAPDFReaderViewController.m; sourceTree = "<group>"; };
 		653A74BDC789E95D7E2415BA /* KWFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWFormatter.m; path = Classes/Core/KWFormatter.m; sourceTree = "<group>"; };
 		66CFA0F696204C37DA33B757 /* Pods-CDAPdfReader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDAPdfReader_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -923,6 +926,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		63ECE9121B5F83E800317877 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				63ECE9131B5F83E800317877 /* CDAPdfReaderProtocol.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		6847C550237ADC3D63752E3E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -948,6 +959,7 @@
 		6A7AD5A25CDA3B01204480E5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				63ECE9121B5F83E800317877 /* Protocols */,
 				1BB4A058D63C031DF111ECAD /* Controllers */,
 				58E7CC5CC0D32175980D5687 /* Model */,
 				EBEB44E1BE26723E50C94F47 /* Utils */,
@@ -1061,7 +1073,6 @@
 		E6BC5292922E6195700696EC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				2D069E3402C61E96EBD7E883 /* CDAPdfReaderProtocol.h */,
 				820D90A4FFA01DF6349D44B2 /* CDAPdfReaderWithThumbnailsProtocol.h */,
 			);
 			path = Protocols;
@@ -1090,6 +1101,8 @@
 			isa = PBXGroup;
 			children = (
 				D3F9BD6A553346EB6BA23BF4 /* CDAPDFReaderOrientationLayout.h */,
+				63ECE90C1B5F7AF400317877 /* CDAPdfReaderUtils.h */,
+				63ECE90D1B5F7AF400317877 /* CDAPdfReaderUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1103,6 +1116,7 @@
 			files = (
 				67E9C5EFE6BCFB3B82736BDE /* CDAAbstractPdfReaderWithThumbsViewController.h in Headers */,
 				14473690D76F64169238D4D3 /* CDAAbstractPdfThumbsViewController.h in Headers */,
+				63ECE9111B5F7B9400317877 /* CDAPdfReaderUtils.h in Headers */,
 				9A3E4AEEA607FFD38588ABE7 /* CDABasePdfThumbsViewController.h in Headers */,
 				53A1086606D0BE3520A0E704 /* CDABaseSBPdfReaderWithThumbsViewController.h in Headers */,
 				8F362597448D0A1325A1E9A6 /* CDAPDFPageViewController.h in Headers */,
@@ -1111,9 +1125,9 @@
 				261A639324A3A4EFE3B2A79A /* CDAPDFReaderContentTile.h in Headers */,
 				2A7CF0EDB3D213CA3BB6FD49 /* CDAPDFReaderContentView.h in Headers */,
 				009111BE315073337C4A7ACE /* CDAPDFReaderDocument.h in Headers */,
+				63ECE9141B5F83E800317877 /* CDAPdfReaderProtocol.h in Headers */,
 				BB9A521C7B3C0206FC273471 /* CDAPDFReaderOrientationLayout.h in Headers */,
 				06913671F0BC07E78EBDC3A7 /* CDAPDFReaderViewController.h in Headers */,
-				B5164B4233ECA3175AD81A1F /* CDAPdfReaderProtocol.h in Headers */,
 				56CCBD5BAE76E7F22F2EAFB6 /* CDAPdfReaderWithThumbnailsProtocol.h in Headers */,
 				8D5B365964FE76DB40C9FAD1 /* CDAPdfThumbCellProtocol.h in Headers */,
 				85FB21E256B55B56E138B147 /* CDAPdfThumbsDataSourceProtocol.h in Headers */,
@@ -1243,7 +1257,6 @@
 				D634FA12D4226DF46AD585C6 /* CDAPDFReaderDocument.h in Headers */,
 				B813282BD26F3CBDE38FA398 /* CDAPDFReaderOrientationLayout.h in Headers */,
 				C5230A3FE115B57C3CDED0B9 /* CDAPDFReaderViewController.h in Headers */,
-				AB949A20FAB552932309B077 /* CDAPdfReaderProtocol.h in Headers */,
 				6FFDDBC9652420F33F2BAA15 /* CDAPdfReaderWithThumbnailsProtocol.h in Headers */,
 				87A082C6148AA496E8C987AF /* CDAPdfThumbCellProtocol.h in Headers */,
 				AF9F3A68837053E00D916107 /* CDAPdfThumbsDataSourceProtocol.h in Headers */,
@@ -1591,6 +1604,7 @@
 				39EBFDCA7C02D1444B3ECC22 /* CDAAbstractPdfThumbsViewController.m in Sources */,
 				5209A170469D4C9EF8DC93DB /* CDABasePdfThumbsViewController.m in Sources */,
 				A8EA66564820DB4816575249 /* CDABaseSBPdfReaderWithThumbsViewController.m in Sources */,
+				63ECE9101B5F7B9100317877 /* CDAPdfReaderUtils.m in Sources */,
 				0A054280C3FF2630D4E5A399 /* CDAPDFPageViewController.m in Sources */,
 				36CA28A743122618486C5D96 /* CDAPDFReaderConstants.m in Sources */,
 				5BB13F27BDCABB4C89932333 /* CDAPDFReaderContentPage.m in Sources */,

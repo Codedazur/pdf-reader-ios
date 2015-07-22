@@ -19,7 +19,7 @@
         UIViewController<CDAPdfThumbsViewControllerProtocol> *thumbsVC = [segue destinationViewController];
         [self setThumbsViewController:thumbsVC];
     }else if ([segue.identifier isEqualToString:@"pdf-reader-container"]) {
-        UIViewController<CDAPdfReaderProtocol> *pdfVC = [segue destinationViewController];
+        UIPageViewController<CDAPdfReaderProtocol> *pdfVC = [segue destinationViewController];
         [pdfVC setDocumentPath:self.documentPath];
         pdfVC.orientationLayout = self.orientationLayout;
         [self setPdfReaderController:pdfVC];
