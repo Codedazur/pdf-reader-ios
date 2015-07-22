@@ -87,7 +87,7 @@
         }
         else {
             pageRef = NULL;
-            NSLog(@"WARNING!!! %@ - page at index %lu is not a CGPDFPageRef, will try to continue the execution removing this object from the reader.", NSStringFromClass([self class]), i);
+            NSLog(@"WARNING!!! %@ - page at index %d is not a CGPDFPageRef, will try to continue the execution removing this object from the reader.", NSStringFromClass([self class]), i);
         }
     }
     

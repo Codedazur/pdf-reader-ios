@@ -1,17 +1,17 @@
 //
-//  CDAPDFReaderViewController.h
+//  CDAPdfReaderProtocol.h
 //  Pods
 //
-//  Created by Gerardo Garrido on 13/07/15.
+//  Created by Tamara Bernad on 21/07/15.
 //
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "CDAPDFReaderDocument.h"
 #import "CDAPDFReaderOrientationLayout.h"
 
-
-@interface CDAPDFReaderViewController : UIPageViewController
-
+@protocol CDAPdfReaderProtocol <NSObject>
+@property (nonatomic, strong) CDAPDFReaderDocument *readerDocument;
 /**
  *  The orientation layout supported by the reader.
  *
@@ -26,7 +26,6 @@
  *  @endcode
  */
 @property (nonatomic, assign) CDAPDFReaderOrientationLayout orientationLayout;
-
 
 /// The current page index starting from 0, or NSNotFound in case no page is shown
 @property (nonatomic, assign) NSUInteger currentPageIndex;

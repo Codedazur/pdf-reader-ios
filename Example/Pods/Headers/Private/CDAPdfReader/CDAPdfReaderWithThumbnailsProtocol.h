@@ -1,0 +1,1 @@
+../../../../../Pod/Classes/Reader/Protocols/CDAPdfReaderWithThumbnailsProtocol.h

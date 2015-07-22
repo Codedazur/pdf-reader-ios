@@ -21,6 +21,8 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		63ECE8E71B5E9B6800317877 /* CDABasePdfThumbViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ECE8E51B5E9B6800317877 /* CDABasePdfThumbViewCell.m */; };
+		63ECE8E81B5E9B6800317877 /* CDABasePdfThumbViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63ECE8E61B5E9B6800317877 /* CDABasePdfThumbViewCell.xib */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		980495AAFEA3E299C10165D4 /* Pods_CDAPdfReader_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8EC168E4A0D748067BA4F72 /* Pods_CDAPdfReader_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FC62D3CA5D67D0B9CC904E99 /* Pods_CDAPdfReader_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5853FE9A18F50F518F3C2F57 /* Pods_CDAPdfReader_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -60,6 +62,9 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		63ECE8E41B5E9B6800317877 /* CDABasePdfThumbViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDABasePdfThumbViewCell.h; sourceTree = "<group>"; };
+		63ECE8E51B5E9B6800317877 /* CDABasePdfThumbViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDABasePdfThumbViewCell.m; sourceTree = "<group>"; };
+		63ECE8E61B5E9B6800317877 /* CDABasePdfThumbViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDABasePdfThumbViewCell.xib; sourceTree = "<group>"; };
 		726427B005F2DA302F5D865B /* Pods-CDAPdfReader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDAPdfReader_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDAPdfReader_Tests/Pods-CDAPdfReader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9B21B7101B8C4BA61D313A31 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -150,6 +155,7 @@
 			children = (
 				5661C1EA1B54F44400DF479A /* assets */,
 				6003F59C195388D20070C39A /* CDAAppDelegate.h */,
+				63ECE8E31B5E9B6800317877 /* Views */,
 				6003F59D195388D20070C39A /* CDAAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* CDAViewController.h */,
@@ -199,6 +205,16 @@
 				BB50BC2B9D8394697F8DED59 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		63ECE8E31B5E9B6800317877 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63ECE8E41B5E9B6800317877 /* CDABasePdfThumbViewCell.h */,
+				63ECE8E51B5E9B6800317877 /* CDABasePdfThumbViewCell.m */,
+				63ECE8E61B5E9B6800317877 /* CDABasePdfThumbViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		AAB311B0C22FD56C38DDED78 /* Pods */ = {
@@ -296,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5661C1ED1B54F4B300DF479A /* drawingwithquartz2d.pdf in Resources */,
+				63ECE8E81B5E9B6800317877 /* CDABasePdfThumbViewCell.xib in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
@@ -410,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63ECE8E71B5E9B6800317877 /* CDABasePdfThumbViewCell.m in Sources */,
 				6003F59E195388D20070C39A /* CDAAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* CDAViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

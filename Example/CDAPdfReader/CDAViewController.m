@@ -7,8 +7,9 @@
 //
 
 #import "CDAViewController.h"
-
-@import CDAPdfReader;
+#import "CDAPDFReaderViewController.h"
+#import "CDABaseSBPdfReaderWithThumbsViewController.h"
+//@import CDAPdfReader;
 
 @interface CDAViewController ()
 
@@ -32,6 +33,12 @@
     if ([segue.identifier isEqual:@"storyboardImplementation"]) {
         CDAPDFReaderViewController *viewController = (CDAPDFReaderViewController *)segue.destinationViewController;
         NSString *documentPath = [[NSBundle mainBundle] pathForResource:@"drawingwithquartz2d" ofType:@"pdf"];
+        [viewController setDocumentPath:documentPath];
+        viewController.orientationLayout = CDAPDFReaderOrientationLayoutPortrait | CDAPDFReaderOrientationLayoutLandscape;
+    }else if([segue.identifier isEqualToString:@"with-thumbs"]){
+        CDABaseSBPdfReaderWithThumbsViewController *viewController = (CDABaseSBPdfReaderWithThumbsViewController *)segue.destinationViewController;
+        NSString *documentPath = [[NSBundle mainBundle] pathForResource:@"drawingwithquartz2d" ofType:@"pdf"];
+
         [viewController setDocumentPath:documentPath];
         viewController.orientationLayout = CDAPDFReaderOrientationLayoutPortrait | CDAPDFReaderOrientationLayoutLandscape;
     }

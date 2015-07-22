@@ -13,13 +13,10 @@
 
 
 @interface CDAPDFReaderViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
-
-@property (nonatomic, strong) CDAPDFReaderDocument *readerDocument;
-
 @end
 
 @implementation CDAPDFReaderViewController
-
+@synthesize readerDocument = _readerDocument, orientationLayout = _orientationLayout, currentPageIndex = _currentPageIndex;
 
 #pragma mark - Lifecycle methods
 
@@ -73,15 +70,17 @@
 
 - (void) setDocumentPath:(NSString *)pdfDocumentPath {
     self.readerDocument = [[CDAPDFReaderDocument alloc] initWithPDFDocumentPath:pdfDocumentPath];
+    [self initializeCurrentViewControllers];
 }
 
 - (void) setPDFPagesRef:(NSArray *)pdfPagesRef {
     self.readerDocument = [[CDAPDFReaderDocument alloc] initWithPDFRefPages:pdfPagesRef];
+    [self initializeCurrentViewControllers];
 }
 
 - (void) setCurrentPageIndex:(NSUInteger)currentPageIndex {
+    if(_currentPageIndex == currentPageIndex)return;
     _currentPageIndex = currentPageIndex;
-    
     [self initializeCurrentViewControllers];
 }
 
@@ -146,14 +145,15 @@
 }
 
 - (void) initializeCurrentViewControllers {
+    if(!self.readerDocument)return;
     CGPDFPageRef firstPageRef = [self.readerDocument pageRefForPageIndex:self.currentPageIndex];
     CDAPDFPageViewController *firstPDFPageViewController = [self createPDFPageViewControllerWithPageRef:firstPageRef andPageIndex:self.currentPageIndex];
     
     if (firstPDFPageViewController == NULL) {
 #ifdef DEBUG
-        [NSException raise:NSInvalidArgumentException format:@"%@ - Invalid starting page at page index %ld. PDF document has %lu pages", NSStringFromClass([self class]), self.currentPageIndex, [self.readerDocument numberOfPages]];
+        [NSException raise:NSInvalidArgumentException format:@"%@ - Invalid starting page at page index %d. PDF document has %d pages", NSStringFromClass([self class]), self.currentPageIndex, [self.readerDocument numberOfPages]];
 #endif
-        NSLog(@"ERROR!!! %@ - Invalid starting page at page index %ld. PDF document has %lu pages", NSStringFromClass([self class]), self.currentPageIndex, [self.readerDocument numberOfPages]);
+        NSLog(@"ERROR!!! %@ - Invalid starting page at page index %d. PDF document has %d pages", NSStringFromClass([self class]), self.currentPageIndex, [self.readerDocument numberOfPages]);
         return;
     }
     NSArray *pages = @[firstPDFPageViewController];

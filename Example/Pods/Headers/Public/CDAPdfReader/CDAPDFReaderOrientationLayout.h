@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/Utils/CDAPDFReaderOrientationLayout.h
+../../../../../Pod/Classes/Core/Utils/CDAPDFReaderOrientationLayout.h

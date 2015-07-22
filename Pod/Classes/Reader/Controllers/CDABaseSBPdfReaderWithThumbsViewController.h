@@ -1,0 +1,14 @@
+//
+//  CDABaseSBPdfReaderViewController.h
+//  PDFThumbsTest
+//
+//  Created by Tamara Bernad on 16/07/15.
+//  Copyright (c) 2015 Code d'Azur. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "CDAAbstractPdfReaderWithThumbsViewController.h"
+
+@interface CDABaseSBPdfReaderWithThumbsViewController : CDAAbstractPdfReaderWithThumbsViewController
+
+@end
