@@ -114,4 +114,7 @@
     return (__bridge CGPDFPageRef)[self.pdfPages objectAtIndex:pageIndex];
 }
 
+- (NSArray *)pdfPageRefPages{
+    return [self.pdfPages copy];
+}
 @end

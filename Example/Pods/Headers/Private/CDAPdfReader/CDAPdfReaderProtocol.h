@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/Reader/Protocols/CDAPdfReaderProtocol.h
+../../../../../Pod/Classes/Core/Protocols/CDAPdfReaderProtocol.h

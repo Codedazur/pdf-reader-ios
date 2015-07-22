@@ -40,5 +40,9 @@
  */
 - (CGPDFPageRef) pageRefForPageIndex:(NSInteger)pageIndex;
 
+/**
+ Retruns a copy of the CGPDFPageRef available in the document
+ */
 
+- (NSArray *)pdfPageRefPages;
 @end

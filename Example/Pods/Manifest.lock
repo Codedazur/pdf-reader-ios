@@ -8,10 +8,10 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   CDAPdfReader:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
-  CDAPdfReader: 4f94b78fc94e7bb0c87d8ec648fcc422fc77b850
+  CDAPdfReader: 9d12b8998e1b7c37f5704da744ee9696dccd203e
   Kiwi: f038a6c61f7a9e4d7766bff5717aa3b3fdb75f55
 
 COCOAPODS: 0.37.2

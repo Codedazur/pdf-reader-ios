@@ -21,6 +21,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSString *documentPath = [[NSBundle mainBundle] pathForResource:@"drawingwithquartz2d" ofType:@"pdf"];
+    CDAPDFReaderDocument *d = [[CDAPDFReaderDocument alloc] initWithPDFDocumentPath:documentPath];
+    NSArray *copyPageRefs = [d pdfPageRefPages];
+    NSLog(@"pages in reader document %i", copyPageRefs.count);
 }
 
 - (void)didReceiveMemoryWarning
