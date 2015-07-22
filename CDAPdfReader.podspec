@@ -10,18 +10,15 @@
 Pod::Spec.new do |s|
   s.name             = "CDAPdfReader"
   s.version          = "0.1.0"
-  s.summary          = "A short description of CDAPdfReader."
+  s.summary          = "A simple PDF Reader library with Thumbnails"
   s.description      = <<-DESC
-                       An optional longer description of CDAPdfReader
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                       Simple PDF Reader library with the possibility of adding Thumbnails. Completely customizable.
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/CDAPdfReader"
+  s.homepage         = "https://github.com/Codedazur/pdf-reader-ios"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "tamarabernad" => "tamara@codedazur.es" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/CDAPdfReader.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/Codedazur/pdf-reader-ios.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
