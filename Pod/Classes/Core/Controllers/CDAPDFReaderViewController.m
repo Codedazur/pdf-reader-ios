@@ -13,6 +13,9 @@
 
 
 @interface CDAPDFReaderViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+
+@property (nonatomic, assign) UIPageViewControllerNavigationDirection navigationDirection;
+
 @end
 
 @implementation CDAPDFReaderViewController
@@ -80,6 +83,15 @@
 
 - (void) setCurrentPageIndex:(NSUInteger)currentPageIndex {
     if(_currentPageIndex == currentPageIndex)return;
+    
+    if (_currentPageIndex == NSNotFound) {
+        self.navigationDirection = UIPageViewControllerNavigationDirectionForward;
+    } else if (_currentPageIndex > currentPageIndex) {
+        self.navigationDirection = UIPageViewControllerNavigationDirectionReverse;
+    } else {
+        self.navigationDirection = UIPageViewControllerNavigationDirectionForward;
+    }
+    
     _currentPageIndex = currentPageIndex;
     [self initializeCurrentViewControllers];
 }
@@ -165,11 +177,11 @@
         CDAPDFPageViewController *previousViewController = [self createPDFPageViewControllerWithPageRef:previousPageRef andPageIndex:previousIndex];
         __weak CDAPDFReaderViewController *weakSelf = self;
         [self setViewControllers:@[previousViewController] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:^(BOOL finished) {
-            [weakSelf setViewControllers:@[firstPDFPageViewController] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+            [weakSelf setViewControllers:@[firstPDFPageViewController] direction:weakSelf.navigationDirection animated:YES completion:nil];
         }];
     }
     else {
-        [self setViewControllers:@[firstPDFPageViewController] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+        [self setViewControllers:@[firstPDFPageViewController] direction:self.navigationDirection animated:YES completion:nil];
     }
 }
 
