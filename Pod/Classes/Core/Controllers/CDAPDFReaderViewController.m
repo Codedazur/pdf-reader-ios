@@ -146,6 +146,7 @@
 
 - (void) initializeCurrentViewControllers {
     if(!self.readerDocument)return;
+    
     CGPDFPageRef firstPageRef = [self.readerDocument pageRefForPageIndex:self.currentPageIndex];
     CDAPDFPageViewController *firstPDFPageViewController = [self createPDFPageViewControllerWithPageRef:firstPageRef andPageIndex:self.currentPageIndex];
     
@@ -156,8 +157,20 @@
         NSLog(@"ERROR!!! %@ - Invalid starting page at page index %d. PDF document has %d pages", NSStringFromClass([self class]), self.currentPageIndex, [self.readerDocument numberOfPages]);
         return;
     }
-    NSArray *pages = @[firstPDFPageViewController];
-    [self setViewControllers:pages direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+    
+    // On Scroll Transition style there is a bug that doesn't load correctly the previous page
+    if (self.currentPageIndex > 0 && self.transitionStyle == UIPageViewControllerTransitionStyleScroll) {
+        NSInteger previousIndex = self.currentPageIndex-1;
+        CGPDFPageRef previousPageRef = [self.readerDocument pageRefForPageIndex:previousIndex];
+        CDAPDFPageViewController *previousViewController = [self createPDFPageViewControllerWithPageRef:previousPageRef andPageIndex:previousIndex];
+        __weak CDAPDFReaderViewController *weakSelf = self;
+        [self setViewControllers:@[previousViewController] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:^(BOOL finished) {
+            [weakSelf setViewControllers:@[firstPDFPageViewController] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+        }];
+    }
+    else {
+        [self setViewControllers:@[firstPDFPageViewController] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+    }
 }
 
 @end
