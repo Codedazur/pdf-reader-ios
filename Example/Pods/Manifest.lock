@@ -1,5 +1,5 @@
 PODS:
-  - CDAPdfReader (0.1.0)
+  - CDAPdfReader (0.1.1)
   - Kiwi (2.3.1)
 
 DEPENDENCIES:
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  CDAPdfReader: 9d12b8998e1b7c37f5704da744ee9696dccd203e
+  CDAPdfReader: 8564c9e40bd3f969f3ad461ed4d752c8941c476a
   Kiwi: f038a6c61f7a9e4d7766bff5717aa3b3fdb75f55
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2

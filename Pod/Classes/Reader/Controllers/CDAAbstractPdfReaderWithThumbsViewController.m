@@ -14,8 +14,18 @@
 @end
 
 @implementation CDAAbstractPdfReaderWithThumbsViewController
-@synthesize thumbsViewController = _thumbsViewController, pdfReaderController = _pdfReaderController, documentPath = _documentPath, orientationLayout = _orientationLayout;
+@synthesize thumbsViewController = _thumbsViewController, pdfReaderController = _pdfReaderController, documentPath = _documentPath, orientationLayout = _orientationLayout, initialPageIndex = _initialPageIndex;
 
+- (instancetype)init{
+    if(!(self = [super init]))return nil;
+    self.initialPageIndex = NSNotFound;
+    return self;
+}
+- (id)initWithCoder:(NSCoder *)aDecoder{
+    if(!(self = [super initWithCoder:aDecoder]))return nil;
+    self.initialPageIndex = NSNotFound;
+    return self;
+}
 - (void)setThumbsViewController:(UIViewController<CDAPdfThumbsViewControllerProtocol> *)thumbsViewController{
     _thumbsViewController = thumbsViewController;
     _thumbsViewController.dataSource = self;

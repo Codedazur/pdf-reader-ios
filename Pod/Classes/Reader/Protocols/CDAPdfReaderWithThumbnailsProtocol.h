@@ -13,5 +13,6 @@
 @property (nonatomic, strong) UIViewController<CDAPdfThumbsViewControllerProtocol> *thumbsViewController;
 @property (nonatomic, strong) UIViewController<CDAPdfReaderProtocol> *pdfReaderController;
 @property (nonatomic, strong) NSString *documentPath;
+@property (nonatomic) NSInteger initialPageIndex;
 @property (nonatomic) CDAPDFReaderOrientationLayout orientationLayout;
 @end

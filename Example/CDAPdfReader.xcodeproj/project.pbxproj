@@ -14,13 +14,13 @@
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* CDAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* CDAAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* CDAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* CDAViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		639ABDE11B6A5B6800D4CCB6 /* CDAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639ABDE01B6A5B6800D4CCB6 /* CDAViewController.m */; };
 		63ECE8E71B5E9B6800317877 /* CDABasePdfThumbViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ECE8E51B5E9B6800317877 /* CDABasePdfThumbViewCell.m */; };
 		63ECE8E81B5E9B6800317877 /* CDABasePdfThumbViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63ECE8E61B5E9B6800317877 /* CDABasePdfThumbViewCell.xib */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
@@ -54,7 +54,6 @@
 		6003F59C195388D20070C39A /* CDAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDAAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* CDAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDAAppDelegate.m; sourceTree = "<group>"; };
 		6003F5A5195388D20070C39A /* CDAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDAViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* CDAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDAViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* CDAPdfReader_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDAPdfReader_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -62,6 +61,7 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		639ABDE01B6A5B6800D4CCB6 /* CDAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAViewController.m; sourceTree = "<group>"; };
 		63ECE8E41B5E9B6800317877 /* CDABasePdfThumbViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDABasePdfThumbViewCell.h; sourceTree = "<group>"; };
 		63ECE8E51B5E9B6800317877 /* CDABasePdfThumbViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDABasePdfThumbViewCell.m; sourceTree = "<group>"; };
 		63ECE8E61B5E9B6800317877 /* CDABasePdfThumbViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDABasePdfThumbViewCell.xib; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 				63ECE8E31B5E9B6800317877 /* Views */,
 				6003F59D195388D20070C39A /* CDAAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				639ABDE01B6A5B6800D4CCB6 /* CDAViewController.m */,
 				6003F5A5195388D20070C39A /* CDAViewController.h */,
-				6003F5A6195388D20070C39A /* CDAViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -428,8 +428,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				63ECE8E71B5E9B6800317877 /* CDABasePdfThumbViewCell.m in Sources */,
+				639ABDE11B6A5B6800D4CCB6 /* CDAViewController.m in Sources */,
 				6003F59E195388D20070C39A /* CDAAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* CDAViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
