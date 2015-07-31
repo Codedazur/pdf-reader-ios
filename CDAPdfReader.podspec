@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "CDAPdfReader"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "A simple PDF Reader library with Thumbnails"
   s.description      = <<-DESC
                        Simple PDF Reader library with the possibility of adding Thumbnails. Completely customizable.
