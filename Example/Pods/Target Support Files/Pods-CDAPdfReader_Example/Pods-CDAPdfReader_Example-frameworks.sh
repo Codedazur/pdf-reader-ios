@@ -52,8 +52,12 @@ code_sign_if_enabled() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'Pods-CDAPdfReader_Example/CDABackgroundOperations.framework'
   install_framework 'Pods-CDAPdfReader_Example/CDAPdfReader.framework'
+  install_framework 'Pods-CDAPdfReader_Example/CDAUtils.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'Pods-CDAPdfReader_Example/CDABackgroundOperations.framework'
   install_framework 'Pods-CDAPdfReader_Example/CDAPdfReader.framework'
+  install_framework 'Pods-CDAPdfReader_Example/CDAUtils.framework'
 fi
