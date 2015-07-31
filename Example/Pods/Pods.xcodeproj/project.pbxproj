@@ -111,6 +111,12 @@
 		5BE0DC09335FB3197C3BC19C12FA94DC /* KWHaveMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F4204B312FF6CF75A7423BAAE48D4D /* KWHaveMatcher.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		60583F6252AC9AC7B91E80F248C1FD03 /* KWMatchers.m in Sources */ = {isa = PBXBuildFile; fileRef = E511D799C0291BB813E2A8CAB55C8928 /* KWMatchers.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		61A5EB68D32C497E6DABFE3113969405 /* KWBeBetweenMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D37455457EF0D894A480C6C9D2BF0073 /* KWBeBetweenMatcher.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		63BECFA21B6BBA3F0048352D /* CDAPdfThumbCreationTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BECF9B1B6BBA280048352D /* CDAPdfThumbCreationTask.m */; };
+		63BECFA31B6BBA430048352D /* CDAPdfThumbsCreatorProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BECF9D1B6BBA280048352D /* CDAPdfThumbsCreatorProcessor.m */; };
+		63BECFA41B6BBA460048352D /* CDAPdfThumbCreationTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 63BECF9A1B6BBA280048352D /* CDAPdfThumbCreationTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63BECFA51B6BBA4C0048352D /* CDAPdfThumbsCreatorProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 63BECF9C1B6BBA280048352D /* CDAPdfThumbsCreatorProcessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63BECFB41B6BBD2B0048352D /* CDAPdfReaderThumbsViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 63BECFB21B6BBD2B0048352D /* CDAPdfReaderThumbsViewModel.h */; };
+		63BECFB51B6BBD2B0048352D /* CDAPdfReaderThumbsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BECFB31B6BBD2B0048352D /* CDAPdfReaderThumbsViewModel.m */; };
 		64048599A14D03D9434B524D0CC62B8E /* KWMock.h in Headers */ = {isa = PBXBuildFile; fileRef = D19B94AED963EC1C2B85E5C06ED2FDA4 /* KWMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6456BF743BF32FA963ECBF9B147C04BD /* CDAPDFReaderContentTile.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EE4E58DF9D12F4EB3D92B41F32CFF8 /* CDAPDFReaderContentTile.m */; };
 		66D39065A11F8913E8CFF57604C1938D /* KWAny.m in Sources */ = {isa = PBXBuildFile; fileRef = 56773F1A3EB1154BB063D4301F76AED1 /* KWAny.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -462,6 +468,12 @@
 		61629F63CD1A05F318540C43AEDCFE41 /* CDAExceptionUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDAExceptionUtils.m; path = Pod/Classes/General/CDAExceptionUtils.m; sourceTree = "<group>"; };
 		6216C37EDEF5D1DF66808DDC2B8DCF52 /* KWBeIdenticalToMatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWBeIdenticalToMatcher.m; path = Classes/Matchers/KWBeIdenticalToMatcher.m; sourceTree = "<group>"; };
 		62FD6A47D74A4FCBFE81AAD32396A85C /* KWNull.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWNull.m; path = Classes/Core/KWNull.m; sourceTree = "<group>"; };
+		63BECF9A1B6BBA280048352D /* CDAPdfThumbCreationTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAPdfThumbCreationTask.h; sourceTree = "<group>"; };
+		63BECF9B1B6BBA280048352D /* CDAPdfThumbCreationTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAPdfThumbCreationTask.m; sourceTree = "<group>"; };
+		63BECF9C1B6BBA280048352D /* CDAPdfThumbsCreatorProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAPdfThumbsCreatorProcessor.h; sourceTree = "<group>"; };
+		63BECF9D1B6BBA280048352D /* CDAPdfThumbsCreatorProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAPdfThumbsCreatorProcessor.m; sourceTree = "<group>"; };
+		63BECFB21B6BBD2B0048352D /* CDAPdfReaderThumbsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAPdfReaderThumbsViewModel.h; sourceTree = "<group>"; };
+		63BECFB31B6BBD2B0048352D /* CDAPdfReaderThumbsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAPdfReaderThumbsViewModel.m; sourceTree = "<group>"; };
 		63DFA833038F4BF259F3E8588B54F768 /* KWStringContainsMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWStringContainsMatcher.h; path = Classes/Matchers/KWStringContainsMatcher.h; sourceTree = "<group>"; };
 		63F846C8A3AFB1ECC2BC7B67645302B2 /* CDAPdfReaderUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDAPdfReaderUtils.h; sourceTree = "<group>"; };
 		64F311D7DB474D7AB74CD4E02A35447A /* NSObject+KiwiVerifierAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+KiwiVerifierAdditions.h"; path = "Classes/Core/NSObject+KiwiVerifierAdditions.h"; sourceTree = "<group>"; };
@@ -771,6 +783,7 @@
 		26FF37E9680DBBCF4CB24C6BD194C0D9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				63BECF991B6BBA280048352D /* Operations */,
 				2D55D3240F8B9C660C6961DA795A5B5A /* Core */,
 				9C4D79602806946A57B2E43CDCF0A5A8 /* Reader */,
 				D626C2E73DB0FC329FC398AB43540A28 /* Thumbs */,
@@ -850,6 +863,26 @@
 				68A01B236FAA675F0791D455875BBD4D /* CDAPDFReaderDocument.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		63BECF991B6BBA280048352D /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				63BECF9A1B6BBA280048352D /* CDAPdfThumbCreationTask.h */,
+				63BECF9B1B6BBA280048352D /* CDAPdfThumbCreationTask.m */,
+				63BECF9C1B6BBA280048352D /* CDAPdfThumbsCreatorProcessor.h */,
+				63BECF9D1B6BBA280048352D /* CDAPdfThumbsCreatorProcessor.m */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		63BECFB11B6BBD2B0048352D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				63BECFB21B6BBD2B0048352D /* CDAPdfReaderThumbsViewModel.h */,
+				63BECFB31B6BBD2B0048352D /* CDAPdfReaderThumbsViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		6E7E7BFF828ED506D5D964DF1E8B7348 /* iOS */ = {
@@ -1102,6 +1135,7 @@
 		9C4D79602806946A57B2E43CDCF0A5A8 /* Reader */ = {
 			isa = PBXGroup;
 			children = (
+				63BECFB11B6BBD2B0048352D /* ViewModel */,
 				7845B5B1A0A4262F10FAFC510F52E70D /* Controllers */,
 				D2F302F846AD0F1CA19AF97771A8FDC5 /* Protocols */,
 			);
@@ -1293,15 +1327,18 @@
 				59D68A29F39F931DE7DA5686F454F398 /* CDAPDFReaderContentPage.h in Headers */,
 				959B1E5C4C6C2E7394F7F1711EAE20CD /* CDAPDFReaderContentTile.h in Headers */,
 				1CFD9E48A07CE5D0CE21CA9040B75401 /* CDAPDFReaderContentView.h in Headers */,
+				63BECFA51B6BBA4C0048352D /* CDAPdfThumbsCreatorProcessor.h in Headers */,
 				809C2ECF5879DD5BCC4B4E994CE370DB /* CDAPDFReaderDocument.h in Headers */,
 				69C120FDFD88A1368C0F206FD3BE2F87 /* CDAPDFReaderOrientationLayout.h in Headers */,
 				8555C9F3B88CB8C99C43FDBB5438066F /* CDAPDFReaderViewController.h in Headers */,
+				63BECFB41B6BBD2B0048352D /* CDAPdfReaderThumbsViewModel.h in Headers */,
 				504E4ED13F5D361C4A66BFA946862F2D /* CDAPdfReader-umbrella.h in Headers */,
 				0120EA4004FAD8195FE2C3621777E5D6 /* CDAPdfReaderProtocol.h in Headers */,
 				D3D32EB620F89793047BFE0E12829A5A /* CDAPdfReaderUtils.h in Headers */,
 				A539AA80A713B801E8133E5134626232 /* CDAPdfReaderWithThumbnailsProtocol.h in Headers */,
 				14396D7D93149F479A14955B3F613922 /* CDAPdfThumbCellProtocol.h in Headers */,
 				E3942B5A69498B513CE8231978BFCE68 /* CDAPdfThumbsDataSourceProtocol.h in Headers */,
+				63BECFA41B6BBA460048352D /* CDAPdfThumbCreationTask.h in Headers */,
 				D8D896235924E0F3BE43C563C631F659 /* CDAPdfThumbsDelegateProtocol.h in Headers */,
 				340F52E27072FAC1BF20B1DC9E3078B1 /* CDAPdfThumbsViewControllerProtocol.h in Headers */,
 			);
@@ -1798,8 +1835,11 @@
 				6456BF743BF32FA963ECBF9B147C04BD /* CDAPDFReaderContentTile.m in Sources */,
 				F509C87A41D9B32ADED2D32981A5B5D0 /* CDAPDFReaderContentView.m in Sources */,
 				527972F0E7B35105C8F3E33636036ABD /* CDAPDFReaderDocument.m in Sources */,
+				63BECFA31B6BBA430048352D /* CDAPdfThumbsCreatorProcessor.m in Sources */,
 				DBA3338D1A02BB788C03AFB578D818AA /* CDAPDFReaderViewController.m in Sources */,
+				63BECFB51B6BBD2B0048352D /* CDAPdfReaderThumbsViewModel.m in Sources */,
 				11AAC0AADF1E0E80428AA0E738F69AC2 /* CDAPdfReader-dummy.m in Sources */,
+				63BECFA21B6BBA3F0048352D /* CDAPdfThumbCreationTask.m in Sources */,
 				C688D48F4E4F3179DB7B1D0639111284 /* CDAPdfReaderUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

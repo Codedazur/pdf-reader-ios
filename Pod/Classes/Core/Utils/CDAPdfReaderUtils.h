@@ -10,4 +10,5 @@
 #import <UIKit/UIKit.h>
 @interface CDAPdfReaderUtils : NSObject
 + (UIImage *)thumbImageFromPageRef:(CGPDFPageRef)pageRef WithFrame:(CGRect)frame;
++ (UIImage *)thumbImageFromPageRef:(CGPDFPageRef)page WithSize:(CGSize)size AndScreenScale:(CGFloat)screenScale;
 @end
