@@ -9,7 +9,7 @@
 #import "CDAAbstractPdfReaderWithThumbsViewController.h"
 #import "CDAPdfReaderUtils.h"
 
-@interface CDAAbstractPdfReaderWithThumbsViewController ()
+@interface CDAAbstractPdfReaderWithThumbsViewController ()<CDAPdfReaderDelegateProtocol>
 
 @end
 
@@ -33,6 +33,7 @@
 }
 - (void)setPdfReaderController:(UIViewController<CDAPdfReaderProtocol> *)pdfReaderController{
     _pdfReaderController = pdfReaderController;
+    [_pdfReaderController setReaderDelegate:self];
 }
 
 #pragma mark - CDAThumbVCDataSource
@@ -46,7 +47,10 @@
 
 #pragma mark - CDAThumbVCDelegate
 - (void)thumbsVC:(id)thumbsVC didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    //TODO throw inheritance exception
     self.pdfReaderController.currentPageIndex = indexPath.row;
+}
+#pragma mark - CDAPdfReaderDelegateProtocol
+- (void)CDAPdfReader:(UIViewController<CDAPdfReaderProtocol> *)pdfReader didChangeToPageIndex:(NSInteger)pageIndex{
+    [self.thumbsViewController setCurrentPageIndex:pageIndex];
 }
 @end

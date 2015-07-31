@@ -44,7 +44,7 @@
         NSString *documentPath = [[NSBundle mainBundle] pathForResource:@"drawingwithquartz2d" ofType:@"pdf"];
 
         [viewController setDocumentPath:documentPath];
-        [viewController setInitialPageIndex:2];
+        [viewController setInitialPageIndex:30];
         viewController.orientationLayout = CDAPDFReaderOrientationLayoutPortrait | CDAPDFReaderOrientationLayoutLandscape;
     }
     else if ([segue.identifier isEqual:@"arrayPagesImplementation"]) {

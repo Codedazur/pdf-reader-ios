@@ -18,6 +18,7 @@
     if ([segue.identifier isEqualToString:@"thumbs-container"]) {
         UIViewController<CDAPdfThumbsViewControllerProtocol> *thumbsVC = [segue destinationViewController];
         [self setThumbsViewController:thumbsVC];
+        if(self.initialPageIndex != NSNotFound)[thumbsVC setCurrentPageIndex:self.initialPageIndex];
     }else if ([segue.identifier isEqualToString:@"pdf-reader-container"]) {
         UIPageViewController<CDAPdfReaderProtocol> *pdfVC = [segue destinationViewController];
         if(self.initialPageIndex != NSNotFound)[pdfVC setCurrentPageIndex:self.initialPageIndex];

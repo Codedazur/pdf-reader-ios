@@ -19,7 +19,7 @@
 @end
 
 @implementation CDAPDFReaderViewController
-@synthesize readerDocument = _readerDocument, orientationLayout = _orientationLayout, currentPageIndex = _currentPageIndex;
+@synthesize readerDocument = _readerDocument, orientationLayout = _orientationLayout, currentPageIndex = _currentPageIndex, readerDelegate = _readerDelegate;
 
 #pragma mark - Lifecycle methods
 
@@ -118,6 +118,9 @@
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
     _currentPageIndex = [[self.viewControllers firstObject] pageIndex];
+    if ([self.readerDelegate respondsToSelector:@selector(CDAPdfReader:didChangeToPageIndex:)]) {
+        [self.readerDelegate CDAPdfReader:self didChangeToPageIndex:_currentPageIndex];
+    }
 }
 
 

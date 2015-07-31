@@ -12,4 +12,5 @@
 @protocol CDAPdfThumbsViewControllerProtocol <NSObject>
 @property (nonatomic, weak) NSObject<CDAPdfThumbsDelegateProtocol> *delegate;
 @property (nonatomic, weak) NSObject<CDAPdfThumbsDataSourceProtocol> *dataSource;
+- (void) setCurrentPageIndex:(NSInteger)pageIndex;
 @end

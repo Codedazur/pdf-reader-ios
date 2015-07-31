@@ -9,10 +9,19 @@
 #import "CDABasePdfThumbViewCell.h"
 @interface CDABasePdfThumbViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIView *viewSelection;
 
 @end
 @implementation CDABasePdfThumbViewCell
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    [self.viewSelection setHidden:YES];
+}
 - (void)setImage:(UIImage *)image{
     self.imageView.image = image;
+}
+- (void)setSelected:(BOOL)selected{
+    [super setSelected:selected];
+    [self.viewSelection setHidden:!selected];
 }
 @end

@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "CDAPDFReaderDocument.h"
 #import "CDAPDFReaderOrientationLayout.h"
+@protocol CDAPdfReaderDelegateProtocol;
 
 @protocol CDAPdfReaderProtocol <NSObject>
+
+@property (nonatomic, weak) NSObject<CDAPdfReaderDelegateProtocol> *readerDelegate;
+
 @property (nonatomic, strong) CDAPDFReaderDocument *readerDocument;
 /**
  *  The orientation layout supported by the reader.
@@ -49,4 +53,8 @@
 /// Indicate whether the Reader supports the Landscape orientation layout or not
 - (BOOL) isLandscapeLayoutSupported;
 
+@end
+
+@protocol CDAPdfReaderDelegateProtocol <NSObject>
+- (void) CDAPdfReader:(UIViewController<CDAPdfReaderProtocol>*)pdfReader didChangeToPageIndex:(NSInteger)pageIndex;
 @end
