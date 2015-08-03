@@ -10,4 +10,6 @@
 #import <UIKit/UIKit.h>
 @protocol CDAPdfThumbProtocol <NSObject>
 - (void)setImage:(UIImage *)image;
+- (void)showLoading;
+- (void)hideLoading;
 @end

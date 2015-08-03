@@ -73,7 +73,15 @@
     [images replaceObjectAtIndex:indexPath.row withObject:processData.result];
     self.pdfImages = [images copy];
     
-    [[self collectionView] reloadItemsAtIndexPaths:@[indexPath]];
+
+    //Hack for the selection state which does some flickering because reloadItemsAtIndexPaths regenerates the whole cell
+    BOOL isSelected = [[self.collectionView indexPathsForSelectedItems] indexOfObject:indexPath] != NSNotFound;
+    [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+    if (isSelected) {
+        [UIView setAnimationsEnabled:NO];
+        [self.collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+        [UIView setAnimationsEnabled:YES];
+    }
 }
 
 #pragma mark - Helpers
@@ -91,8 +99,10 @@
     UIImage *img = [self.images objectAtIndex:indexPath.row];
     img = [img isEqual:[NSNull null]] ? nil : img;
     if(!img){
-
+        [thumb showLoading];
         [self.thumbsCreationProcessor processThumbsWithPageRefs:@[(__bridge id)[self.readerDocument pageRefForPageIndex:indexPath.row]] ThumbSize:CGSizeMake(100, 100) ScreenScale:1.0 ForIndexPaths:@[indexPath]];
+    }else{
+        [thumb hideLoading];
     }
     [thumb setImage:img];
 }
