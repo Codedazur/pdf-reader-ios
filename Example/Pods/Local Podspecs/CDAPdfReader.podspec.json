@@ -1,6 +1,6 @@
 {
   "name": "CDAPdfReader",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "summary": "A simple PDF Reader library with Thumbnails",
   "description": "Simple PDF Reader library with the possibility of adding Thumbnails. Completely customizable.",
   "homepage": "https://github.com/Codedazur/pdf-reader-ios",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/Codedazur/pdf-reader-ios.git",
-    "tag": "0.1.3"
+    "tag": "0.1.4"
   },
   "platforms": {
     "ios": "7.0"

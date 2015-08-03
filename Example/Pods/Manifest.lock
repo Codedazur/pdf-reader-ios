@@ -1,9 +1,9 @@
 PODS:
-  - CDABackgroundOperations (0.1.2):
+  - CDABackgroundOperations (0.1.3):
     - CDAUtils
-  - CDAPdfReader (0.1.3):
+  - CDAPdfReader (0.1.4):
     - CDABackgroundOperations
-  - CDAUtils (0.1.1)
+  - CDAUtils (0.1.2)
   - Kiwi (2.3.1)
 
 DEPENDENCIES:
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  CDABackgroundOperations: e104bd6c2f90858b3da341cdaf1dc5b7e69e0e46
-  CDAPdfReader: 4e44e7ca45e5e8ad225be230bf66eac3cf413454
-  CDAUtils: 83819c449c6d1a0ac34bacad061c75a62553a91b
+  CDABackgroundOperations: ea3ac46fefb213a970709052c50f77717feb4252
+  CDAPdfReader: 6ec7f4c9b92b46ebba47f5e0b9c3499a19fcfa28
+  CDAUtils: 5708e73ee1ef1bb79bfb770b1f0e383b0326eba6
   Kiwi: f038a6c61f7a9e4d7766bff5717aa3b3fdb75f55
 
 COCOAPODS: 0.38.2

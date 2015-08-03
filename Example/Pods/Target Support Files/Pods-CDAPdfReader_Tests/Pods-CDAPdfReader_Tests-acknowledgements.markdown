@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## CDABackgroundOperations
 
-Copyright (c) 2015 tamarabernad <tamara@codedazur.es>
+Copyright (c) 2015 Code d'Azur <info@codedazur.nl>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -26,7 +26,7 @@ THE SOFTWARE.
 
 ## CDAPdfReader
 
-Copyright (c) 2015 tamarabernad <tamara@codedazur.es>
+Copyright (c) 2015 Code d'Azur <info@codedazur.nl>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -49,7 +49,7 @@ THE SOFTWARE.
 
 ## CDAUtils
 
-Copyright (c) 2015 tamarabernad <tamara@codedazur.es>
+Copyright (c) 2015 Code d'Azur <info@codedazur.nl>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
