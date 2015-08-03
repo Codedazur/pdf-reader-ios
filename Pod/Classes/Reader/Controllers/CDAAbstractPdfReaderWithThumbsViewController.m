@@ -16,6 +16,7 @@
 @implementation CDAAbstractPdfReaderWithThumbsViewController
 @synthesize thumbsViewController = _thumbsViewController, pdfReaderController = _pdfReaderController, documentPath = _documentPath, orientationLayout = _orientationLayout, initialPageIndex = _initialPageIndex;
 
+#pragma mark - life cycle
 - (instancetype)init{
     if(!(self = [super init]))return nil;
     self.initialPageIndex = NSNotFound;
@@ -26,23 +27,15 @@
     self.initialPageIndex = NSNotFound;
     return self;
 }
+
+#pragma mark - public
 - (void)setThumbsViewController:(UIViewController<CDAPdfThumbsViewControllerProtocol> *)thumbsViewController{
     _thumbsViewController = thumbsViewController;
-    _thumbsViewController.dataSource = self;
     _thumbsViewController.delegate = self;
 }
 - (void)setPdfReaderController:(UIViewController<CDAPdfReaderProtocol> *)pdfReaderController{
     _pdfReaderController = pdfReaderController;
     [_pdfReaderController setReaderDelegate:self];
-}
-
-#pragma mark - CDAThumbVCDataSource
-- (void)thumbsVC:(UIViewController *)thumbsVC setupThumb:(UIView<CDAPdfThumbProtocol> *)thumb OnIndexPath:(NSIndexPath *)indexPath{
-    CGPDFPageRef page = [self.pdfReaderController.readerDocument pageRefForPageIndex:indexPath.row];
-    [thumb setImage:[CDAPdfReaderUtils thumbImageFromPageRef:page WithFrame:thumb.frame]];
-}
-- (NSInteger)thumbsVC:(UIViewController *)thumbsVC numberOfItemsInSection:(NSInteger)section{
-    return [self.pdfReaderController.readerDocument numberOfPages];
 }
 
 #pragma mark - CDAThumbVCDelegate
@@ -53,4 +46,5 @@
 - (void)CDAPdfReader:(UIViewController<CDAPdfReaderProtocol> *)pdfReader didChangeToPageIndex:(NSInteger)pageIndex{
     [self.thumbsViewController setCurrentPageIndex:pageIndex];
 }
+
 @end

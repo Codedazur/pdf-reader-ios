@@ -16,12 +16,15 @@
 @synthesize delegate = _delegate, dataSource = _dataSource;
 
 #pragma mark - polymorphism
+- (void)setDocumentPath:(NSString *)pdfDocumentPath{
+    //TODO throw override exception
+}
 - (UICollectionView *)collectionView{
-    //TODO overwrite exception
+    //TODO throw override exception
     return nil;
 }
 - (NSString *)cellIdentifier{
-    //TODO overwrite
+    //TODO throw override exception
     return nil;
 }
 
@@ -59,8 +62,9 @@
 
 #pragma mark - helopers
 - (void)scrollToPageIndex:(NSInteger)pageIndex animated:(BOOL)animated{
+    if([self.dataSource thumbsVC:self numberOfItemsInSection:0] <= pageIndex)return;
     //TODO find a way to check scroll postition depending on the layout used on the collection view
-    [[self collectionView] selectItemAtIndexPath:[NSIndexPath indexPathForRow:self.currentPageIndex inSection:0]
+    [[self collectionView] selectItemAtIndexPath:[NSIndexPath indexPathForRow:pageIndex inSection:0]
                                         animated:animated
                                   scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
 }

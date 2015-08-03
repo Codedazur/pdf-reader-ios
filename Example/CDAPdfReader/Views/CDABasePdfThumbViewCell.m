@@ -8,6 +8,7 @@
 
 #import "CDABasePdfThumbViewCell.h"
 @interface CDABasePdfThumbViewCell()
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIView *viewSelection;
 
@@ -24,4 +25,11 @@
     [super setSelected:selected];
     [self.viewSelection setHidden:!selected];
 }
+- (void)showLoading{
+    [self.activityIndicator startAnimating];
+}
+- (void)hideLoading{
+    [self.activityIndicator stopAnimating];
+}
+
 @end

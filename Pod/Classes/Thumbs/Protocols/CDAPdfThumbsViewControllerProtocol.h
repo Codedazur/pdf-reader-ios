@@ -13,4 +13,5 @@
 @property (nonatomic, weak) NSObject<CDAPdfThumbsDelegateProtocol> *delegate;
 @property (nonatomic, weak) NSObject<CDAPdfThumbsDataSourceProtocol> *dataSource;
 - (void) setCurrentPageIndex:(NSInteger)pageIndex;
+- (void) setDocumentPath:(NSString *)pdfDocumentPath;
 @end
