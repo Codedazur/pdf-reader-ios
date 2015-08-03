@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "CDAPdfReaderWithThumbnailsProtocol.h"
-@interface CDAAbstractPdfReaderWithThumbsViewController : UIViewController<CDAPdfReaderWithThumbnailsProtocol, CDAPdfThumbsDataSourceProtocol, CDAPdfThumbsDelegateProtocol>
+@interface CDAAbstractPdfReaderWithThumbsViewController : UIViewController<CDAPdfReaderWithThumbnailsProtocol, CDAPdfThumbsDelegateProtocol>
 
 @end
