@@ -40,14 +40,17 @@
     self.pendingOperations.processesQueue.suspended = false;
 }
 - (void)processThumbsWithPageRefs:(NSArray *)pageRefs ThumbSize:(CGSize)thumbSize ScreenScale:(CGFloat)screenScale ForIndexPaths:(NSArray *)visiblePaths{
+
+    NSSet *visibleRows = [NSSet setWithArray:visiblePaths];
     
-    NSArray *allPendingOperations = [self.pendingOperations.processesInProgress allKeys];
+    NSMutableSet *allPendingOperations =[NSMutableSet setWithArray:[self.pendingOperations.processesInProgress allKeys]];
     
-    NSMutableArray *toBeCancelled = [allPendingOperations copy];
-    [toBeCancelled removeObjectsInArray:visiblePaths];
     
-    NSMutableArray *toBeStarted = [visiblePaths copy];
-    [toBeCancelled removeObjectsInArray:allPendingOperations];
+    NSMutableSet *toBeCancelled = [allPendingOperations mutableCopy];
+    [toBeCancelled minusSet:visibleRows];
+    
+    NSMutableSet *toBeStarted = [visibleRows mutableCopy];
+    [toBeStarted minusSet:allPendingOperations];
     
     
     for (NSIndexPath *indexPath in toBeCancelled) {
