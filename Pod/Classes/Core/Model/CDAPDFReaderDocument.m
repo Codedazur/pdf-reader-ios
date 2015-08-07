@@ -50,7 +50,7 @@
         return nil;
     }
     
-    const char *filepath = [pdfPath cStringUsingEncoding:NSASCIIStringEncoding];
+    const char *filepath = [pdfPath cStringUsingEncoding:NSUTF8StringEncoding];
     CFStringRef path = CFStringCreateWithCString(NULL, filepath, kCFStringEncodingUTF8);
     CFURLRef url = CFURLCreateWithFileSystemPath(NULL, path, kCFURLPOSIXPathStyle, 0);
     

@@ -41,7 +41,7 @@
         viewController.orientationLayout = CDAPDFReaderOrientationLayoutPortrait | CDAPDFReaderOrientationLayoutLandscape;
     }else if([segue.identifier isEqualToString:@"with-thumbs"]){
         CDABaseSBPdfReaderWithThumbsViewController *viewController = (CDABaseSBPdfReaderWithThumbsViewController *)segue.destinationViewController;
-        NSString *documentPath = [[NSBundle mainBundle] pathForResource:@"drawingwithquartz2d" ofType:@"pdf"];
+        NSString *documentPath = [[NSBundle mainBundle] pathForResource:@"ás" ofType:@"pdf"];
 
         [viewController setDocumentPath:documentPath];
         [viewController setInitialPageIndex:30];

@@ -21,6 +21,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		639ABDE11B6A5B6800D4CCB6 /* CDAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639ABDE01B6A5B6800D4CCB6 /* CDAViewController.m */; };
+		63E2C7661B74F44100FC1477 /* ás.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63E2C7651B74F44100FC1477 /* ás.pdf */; };
 		63ECE8E71B5E9B6800317877 /* CDABasePdfThumbViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ECE8E51B5E9B6800317877 /* CDABasePdfThumbViewCell.m */; };
 		63ECE8E81B5E9B6800317877 /* CDABasePdfThumbViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63ECE8E61B5E9B6800317877 /* CDABasePdfThumbViewCell.xib */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		639ABDE01B6A5B6800D4CCB6 /* CDAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAViewController.m; sourceTree = "<group>"; };
+		63E2C7651B74F44100FC1477 /* ás.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ás.pdf"; sourceTree = "<group>"; };
 		63ECE8E41B5E9B6800317877 /* CDABasePdfThumbViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDABasePdfThumbViewCell.h; sourceTree = "<group>"; };
 		63ECE8E51B5E9B6800317877 /* CDABasePdfThumbViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDABasePdfThumbViewCell.m; sourceTree = "<group>"; };
 		63ECE8E61B5E9B6800317877 /* CDABasePdfThumbViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDABasePdfThumbViewCell.xib; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				5661C1EC1B54F4B300DF479A /* drawingwithquartz2d.pdf */,
+				63E2C7651B74F44100FC1477 /* ás.pdf */,
 			);
 			path = PDFs;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E2C7661B74F44100FC1477 /* ás.pdf in Resources */,
 				5661C1ED1B54F4B300DF479A /* drawingwithquartz2d.pdf in Resources */,
 				63ECE8E81B5E9B6800317877 /* CDABasePdfThumbViewCell.xib in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
