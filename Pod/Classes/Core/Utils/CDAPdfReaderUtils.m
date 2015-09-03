@@ -37,8 +37,6 @@
     CGContextTranslateCTM(context, 0, targetThumbSize.height);
     CGContextScaleCTM(context, targetThumbSize.width / pageRect.size.width, - targetThumbSize.height / pageRect.size.height);
     
-    CGContextSetFillColorWithColor(context, [[UIColor whiteColor] CGColor]);
-    CGContextFillEllipseInRect(context, CGRectMake(0, 0, targetThumbSize.width, targetThumbSize.height));
     CGContextDrawPDFPage(context, page);
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
@@ -105,8 +103,6 @@
     CGContextTranslateCTM(context, 0, frame.size.height);
     CGContextScaleCTM(context, frame.size.width / pageRect.size.width, - frame.size.height / pageRect.size.height);
     
-    CGContextSetFillColorWithColor(context, [[UIColor whiteColor] CGColor]);
-    CGContextFillEllipseInRect(context, rect);
     CGContextDrawPDFPage(context, page);
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
