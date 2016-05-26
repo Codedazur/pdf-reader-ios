@@ -29,4 +29,5 @@
 - (void) suspendAllThumbConversionOperations;
 - (void) resumeAllThumbConversionOperations;
 - (void)processThumbsWithPageRefs:(NSArray *)pageRefs ThumbSize:(CGSize)thumbSize ScreenScale:(CGFloat)screenScale ForIndexPaths:(NSArray *)visiblePaths;
+- (void)processThumbWithPageRef:(CGPDFPageRef)pageRef ThumbSize:(CGSize)thumbSize ScreenScale:(CGFloat)screenScale ForIndexPaths:(NSIndexPath *)indexPath;
 @end

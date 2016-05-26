@@ -20,6 +20,13 @@ it, simply add the following line to your Podfile:
 pod "CDAPdfReader"
 ```
 
+```ruby
+git add -A && git commit -m "Release 0.1.11"
+git tag '0.1.11'
+git push --tags
+pod repo push bitbucket-cda-ios-pods CDAPdfReader.podspec --allow-warnings
+``
+
 ## Author
 
 tamarabernad, tamara@codedazur.es

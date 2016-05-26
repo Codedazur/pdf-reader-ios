@@ -39,8 +39,19 @@
 - (void) resumeAllThumbConversionOperations{
     self.pendingOperations.processesQueue.suspended = false;
 }
+- (void)processThumbWithPageRef:(CGPDFPageRef)pageRef ThumbSize:(CGSize)thumbSize ScreenScale:(CGFloat)screenScale ForIndexPaths:(NSIndexPath *)indexPath{
+    NSMutableSet *allPendingOperations =[NSMutableSet setWithArray:[self.pendingOperations.processesInProgress allKeys]];
+    if([allPendingOperations containsObject:indexPath])return;
+    
+    CDABGTaskData *processData = [[CDABGTaskData alloc] initWithName:@"Process pdf thumb"
+                                                         AndUserInfo:@{@"page-ref":(__bridge id)pageRef,
+                                                                       @"thumb-size": [NSValue valueWithCGSize:thumbSize],
+                                                                       @"screen-scale":[NSNumber numberWithFloat:screenScale]}];
+    
+    [self startProcessForData:processData AndKey:indexPath];
+}
 - (void)processThumbsWithPageRefs:(NSArray *)pageRefs ThumbSize:(CGSize)thumbSize ScreenScale:(CGFloat)screenScale ForIndexPaths:(NSArray *)visiblePaths{
-
+    
     NSSet *visibleRows = [NSSet setWithArray:visiblePaths];
     
     NSMutableSet *allPendingOperations =[NSMutableSet setWithArray:[self.pendingOperations.processesInProgress allKeys]];
