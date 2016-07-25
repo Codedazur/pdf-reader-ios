@@ -200,7 +200,7 @@
         }];
     }
     else {
-        [self setViewControllers:@[firstPDFPageViewController] direction:self.navigationDirection animated:YES completion:nil];
+        [self setViewControllers:@[firstPDFPageViewController] direction:self.navigationDirection animated:NO completion:nil];
     }
 }
 
